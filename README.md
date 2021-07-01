@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Pavan Kumar
 - 👀 I love ✨ Video Games ✨..
 - 🌱 I’m currently learning Data Science..
-- 💞️ I’m looking to collaborate on NLP and Chatbots..
+- 💞️ I’m looking to collaborate on BigData and Business Ideas..
 - 📫 Just ping me on Instagram - @pavankumar.balijepalli ...
 
 <!---
