@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Pavan Kumar
 - 👀 I love ✨ Video Games ✨..
 - 🌱 I’m currently learning React..
-- 💞️ I’m looking to collaborate on Machine Learning and Business Ideas..
+- 💞️ I’m looking to collaborate on UI Design..
 - 📫 Just ping me on Instagram - @pavankumar.balijepalli ...
 
 <!---
