@@ -4,7 +4,7 @@ Hi, I’m Pavan Kumar. I am a Data Science Enthusiast. I have done some [interes
 - I’m currently learning Data Science.. 🌱
 - 💞️ I’m looking to collaborate on AI and Deep Learning..
 - 📫 Just ping me on Instagram - [@pavankumar.balijepalli](https://www.instagram.com/pavankumar.balijepalli)
-- 👔 Or add me on Linkedin - [@pavankumar.balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
+- 👔 Or add me on Linkedin - [pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
 
 ![Bunny's GitHub stats](https://github-readme-stats.vercel.app/api?username=pavankumarbalijepalli&show_icons=true)
 <br/>
