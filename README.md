@@ -6,9 +6,11 @@ Hi, I’m Pavan Kumar. I am a Data Science Enthusiast. I have done some [interes
 - 📫 Just ping me on Instagram - [@pavankumar.balijepalli](https://www.instagram.com/pavankumar.balijepalli)
 - 👔 Or add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
 
-![Bunny's GitHub stats](https://github-readme-stats.vercel.app/api?username=pavankumarbalijepalli&show_icons=true)
-<br/>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pavankumarbalijepalli&hide=scss,html)](https://github.com/anuraghazra/github-readme-stats)
+&nbsp;&nbsp;&nbsp;&nbsp;![Bunny's GitHub stats](https://github-readme-stats.vercel.app/api?username=pavankumarbalijepalli&show_icons=true)
+
+
+<br/>
 
 <!---
 pavankumarbalijepalli/pavankumarbalijepalli is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
