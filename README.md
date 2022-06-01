@@ -1,8 +1,8 @@
-Hi, I’m Pavan Kumar. I am a Data Science Enthusiast. I have done some [interesting work](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. I just want to build a decent portfolio for my learnings. Here are some random facts about me.
-- I love ✨ Video Games ✨..
-- I design professional logos for companies and personal brands.
-- I’m currently learning Data Science.. 🌱
-- 💞️ I’m looking to collaborate on AI and Deep Learning..
+Hi, I’m Pavan Kumar. I am a Data Science Enthusiast. I have done some [interesting work](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. This will be a portfolio for my learnings. Here are some random facts about me.
+- 🎮 I love ✨ Video Games ✨..
+- 🖊️ I design logos for small businesses and personal brands.
+- 🌱 I’m currently learning Data Science. 
+- 💞️ I’m looking to collaborate on AI and Deep Learning.
 - 📫 Just ping me on Instagram - [@pavankumar.balijepalli](https://www.instagram.com/pavankumar.balijepalli)
 - 👔 Or add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
 
