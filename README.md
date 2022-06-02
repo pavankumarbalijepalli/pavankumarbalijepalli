@@ -8,8 +8,8 @@ Hi, I’m Pavan Kumar. I am a Data Science Enthusiast. I have done some [interes
 
 <br/>
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pavankumarbalijepalli&hide=scss,html)](https://github.com/anuraghazra/github-readme-stats)
-&nbsp;&nbsp;&nbsp;&nbsp;![Bunny's GitHub stats](https://github-readme-stats.vercel.app/api?username=pavankumarbalijepalli&show_icons=true)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=pavankumarbalijepalli&langs_count=3)](https://github.com/anuraghazra/github-readme-stats)
+&nbsp;&nbsp;&nbsp;&nbsp;![Bunny's GitHub stats](https://github-readme-stats.vercel.app/api?username=pavankumarbalijepalli&show_icons=true&line_height=27)
 
 
 <br/>
