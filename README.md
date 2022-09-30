@@ -1,9 +1,8 @@
-Hi, I'm a Data Scientist, and I have done some [interesting work here](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. This will be a portfolio for my learnings. Here are some random facts about me.
+Hi, I'm a Machine Learning Engineer, and I have done some [interesting work here](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. This will be a portfolio for my learnings. Here are some random facts about me.
 
 - 🎮 I love ✨ Video Games ✨..
 - 🖊️ I design logos for personal brands.
 - 🌱 Building a [Bootcamp](https://github.com/pavankumarbalijepalli/Data_Science_Bootcamp) for novice data science enthusiasts to understand and get familiar with world around data science.
-- ☕ Working on a Framework (Private till Alpha) for ML which encapsulates everything from Data Retrieval to Model Evaluation including Data Visualisation, Exploratory Data Analysis. Will help a lot in the bootcamp.
 - 📫 Just ping me on Instagram - [@pavankumar.balijepalli](https://www.instagram.com/pavankumar.balijepalli)
 - 👔 Or add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
 
