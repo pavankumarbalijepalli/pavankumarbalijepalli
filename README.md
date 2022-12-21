@@ -2,7 +2,8 @@ Hi, I'm a Machine Learning Engineer, and I have done some [interesting work here
 
 - 🎮 I love ✨ Video Games ✨..
 - 🖊️ I design logos for personal brands.
-- 🌱 Building a [Bootcamp](https://github.com/pavankumarbalijepalli/complete-data-science-bootcamp) for novice data science enthusiasts to understand and get familiar with world around data science.
+- 🌱 Building a [bootcamp](https://github.com/pavankumarbalijepalli/complete-data-science-bootcamp) for novice data science enthusiasts to understand and get familiar with world around `data science`.
+- 🎃 Building another [bootcamp](https://github.com/pavankumarbalijepalli/complete-data-science-bootcamp) for novice programming enthusiasts to get familiar with `python`.
 - 📫 Just ping me on Instagram - [@pavankumar.balijepalli](https://www.instagram.com/pavankumar.balijepalli)
 - 👔 Or add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
 
