@@ -1,11 +1,12 @@
-Hi, I'm a Machine Learning Engineer, and I have done some [interesting work here](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. This will be a portfolio for my learnings. Here are some random facts about me.
+Hi, I'm a Senior Machine Learning Engineer, and I have done some [interesting work here](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. This will be a portfolio for my learnings. Here are some random facts about me.
 
-- 🎮 I love ✨ Video Games ✨..
-- 🖊️ I design logos for personal brands.
+- 🎮 I love playing ✨ Video Games ✨..
+- 🖊️ I sketch to keep my mind at peace..
 - 🌱 Building a [bootcamp](https://github.com/pavankumarbalijepalli/complete-data-science-bootcamp) for novice data science enthusiasts to understand and get familiar with world around `data science`.
 - 🎃 Building another [bootcamp](https://github.com/pavankumarbalijepalli/complete-data-science-bootcamp) for novice programming enthusiasts to get familiar with `python`.
 - 📫 Just ping me on Instagram - [@pavankumar.balijepalli](https://www.instagram.com/pavankumar.balijepalli)
 - 👔 Or add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
+- 🐤 Should I twitter?
 
 <br/>
 
