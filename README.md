@@ -2,7 +2,6 @@ Hi, I'm a Senior Machine Learning Engineer, and I have done some [interesting wo
 
 - 🎮 I love playing ✨ Video Games ✨..
 - 🖊️ I sketch to keep my mind at peace..
-- 📖 Currently learning HuggingFace to enhance my skills in Vision and Language Processing.
 - 🌱 Building a [DS bootcamp](https://github.com/pavankumarbalijepalli/complete-data-science-bootcamp) for novice data science enthusiasts to understand and get familiar with world around `data science`.
 - 🎃 Building a [Python bootcamp](https://github.com/pavankumarbalijepalli/complete-python-bootcamp) for novice programming enthusiasts to get familiar with `python`.
 - 📫 Just ping me on Instagram - [@pavankumar.balijepalli](https://www.instagram.com/pavankumar.balijepalli)
