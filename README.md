@@ -2,10 +2,8 @@ Hi, I'm a Senior Machine Learning Engineer, and I have done some [interesting wo
 
 - 🎮 I love playing ✨ Video Games ✨..
 - 🖊️ I sketch to keep my mind at peace...
-- 🌱 Building a [DS bootcamp](https://github.com/pavankumarbalijepalli/complete-data-science-bootcamp) for novice data science enthusiasts to understand and get familiar with the world around `data science`.
-- 🎃 Building a [Python bootcamp](https://github.com/pavankumarbalijepalli/complete-python-bootcamp) for novice programming enthusiasts to get familiar with `python`.
-- 👔 Or add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
-- 🐤 Should I Twitter?
+- 👔 Add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
+- 🐤 Need faster reply? Raise an issue on this repository lol. I can't stand issues.
 
 <br/>
 
