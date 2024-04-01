@@ -3,7 +3,7 @@ Hi, I'm a Senior Machine Learning Engineer, and I have done some [interesting wo
 - 🎮 I love playing ✨ Video Games ✨..
 - 🖊️ I sketch to keep my mind at peace...
 - 👔 Add me on Linkedin - [@pavankumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
-- 🐤 Need faster reply? Raise an issue on this repository lol. I can't stand issues.
+- 🐤 Need faster reply? Raise an issue on [this](https://github.com/pavankumarbalijepalli/react-monsters-rolodex) repository lol. I can't stand issues.
 
 <br/>
 
