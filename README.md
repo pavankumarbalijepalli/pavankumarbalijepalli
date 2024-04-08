@@ -1,4 +1,4 @@
-Hi, I'm a Senior Machine Learning Engineer, and I have done some [interesting work here](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. This will be a portfolio of my learnings.
+Hi, I'm a Data Scientist, and I have done some [interesting work here](https://github.com/pavankumarbalijepalli?tab=repositories). Kindly leave a star if you found anything helpful. This will be a portfolio of my learnings.
 
 - 🎮 I love playing ✨ Video Games ✨..
 - 🖊️ I sketch to keep my mind at peace...
