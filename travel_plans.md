@@ -231,3 +231,106 @@ This is mid-range: you could cut ~20% (budget hotels, less shopping) or add ~20%
 - Night Safari is optional depending on child’s bedtime comfort.  
 
 ---
+
+# 🇻🇳 Vietnam Itinerary (7 Days, December 2025)
+**Family-friendly with a 2-year-old | Vegetarian | Flights + Hotels (booked) | Relaxed pace**
+
+---
+
+## ✈️ Flights
+
+### International (India ↔ Vietnam)
+- Roundtrip fares: **₹22,000 – ₹35,000 per adult** (economy, nonstop if possible).  
+- Toddler under 2: lap infant ~10% of adult fare.  
+- Duration: ~4–5 hrs (Delhi/Mumbai → Hanoi/Ho Chi Minh).  
+- Airlines: Vietnam Airlines, VietJet, Indigo, Singapore Airlines (via SG).  
+
+### Domestic (within Vietnam)
+- Internal flights (e.g., Hanoi ↔ Da Nang ↔ Ho Chi Minh): **₹4,000 – ₹6,000 per person per leg**.  
+- Toddler usually free / minimal charge.  
+- Duration: ~1–1.5 hrs per flight.  
+
+---
+
+## 🗓️ Day-by-Day Plan
+
+### Day 1 — Arrival in Hanoi
+- Morning/Afternoon: Arrive in Hanoi, check into hotel (already booked).  
+- Afternoon: Rest & nap for toddler.  
+- Evening: Stroll around **Hoan Kiem Lake** + **Ngoc Son Temple**.  
+- Dinner: Vegetarian pho / tofu dishes at Old Quarter restaurants.  
+
+---
+
+### Day 2 — Hanoi: Culture + Kid-friendly
+- Morning: Visit **Temple of Literature** (open courtyards, stroller-friendly).  
+- Lunch: Vegetarian Vietnamese set meal.  
+- Afternoon: **Vietnam Museum of Ethnology** — interactive exhibits.  
+- Evening: Optional **Water Puppet Show** (short, entertaining for kids).  
+
+---
+
+### Day 3 — Hanoi → Ha Long Bay (Day Cruise)
+- Morning: Transfer (~2 hrs by shuttle bus).  
+- Board a **Ha Long Bay day cruise** (safer with toddler than overnight).  
+- Vegetarian meals available onboard (request in advance).  
+- Afternoon: Enjoy bay scenery, caves, light activities.  
+- Evening: Return to Hanoi.  
+
+---
+
+### Day 4 — Fly to Da Nang → Hoi An
+- Morning: Flight from Hanoi → Da Nang (~1.5 hr).  
+- Transfer (~45 min) to Hoi An, check into hotel.  
+- Afternoon: Rest.  
+- Evening: Stroll **Hoi An Ancient Town** (lanterns, pedestrian zone). Toddler-friendly.  
+
+---
+
+### Day 5 — Hoi An: Nature & Family
+- Morning: Bicycle with child seat or walk around **rice paddies** (gentle pace).  
+- Lunch: Try **Cao Lau noodles (veg version)**.  
+- Afternoon: Visit **An Bang Beach** (quiet area, short play).  
+- Evening: Lantern-lit boat ride (safe, short duration).  
+
+---
+
+### Day 6 — Da Nang → Ho Chi Minh City
+- Morning: Flight Da Nang → Ho Chi Minh (~1.5 hr).  
+- Afternoon: Nap / rest.  
+- Evening: Walk along **Nguyen Hue Walking Street**, toddler can run/play safely.  
+
+---
+
+### Day 7 — Ho Chi Minh City & Departure
+- Morning: Visit **Saigon Zoo & Botanical Gardens** (kid-friendly).  
+- Lunch: Vegetarian Vietnamese / Indian food.  
+- Afternoon: Last-minute shopping at **Ben Thanh Market** (souvenirs).  
+- Evening: Transfer to airport for return flight.  
+
+---
+
+## 💰 Budget Estimate (2 adults + toddler, excl. hotels)
+
+| Category | Cost (VND / USD) | INR (approx) |
+|----------|-----------------:|-------------:|
+| International flights (India ↔ Vietnam) | ~$500–750 per adult | ₹22,000 – ₹35,000 each |
+| Domestic flights (2 internal legs) | ~$100–150 per adult | ₹8,000 – ₹12,000 each |
+| Meals (vegetarian, 7 days) | ~$20–30 per day | ₹11,500 – ₹16,000 total |
+| Transport (taxis, shuttles, transfers) | ~$10–20 per day | ₹6,000 – ₹10,000 total |
+| Attractions / tickets / tours | ~$100–150 | ₹8,000 – ₹12,000 total |
+| Misc (shopping, snacks, extras) | — | ₹10,000 – ₹15,000 |
+
+**Overall Total (without hotels):**  
+👉 **₹90,000 – ₹1,20,000 for 7 days**
+
+---
+
+## 🍼 Toddler & Family Tips
+- Bring a **foldable stroller** (old towns have cobbled streets, so baby carrier also useful).  
+- Domestic flights: always **book early** and request **bassinet/priority boarding**.  
+- Vegetarian meals: Request in advance (especially cruises & flights). Many Indian + vegetarian restaurants in Hanoi, Hoi An, HCMC.  
+- Pack snacks and comfort foods for toddler (Vietnamese cuisine often fish-sauce based).  
+- Keep one **midday rest** daily to avoid overtiring.  
+
+---
