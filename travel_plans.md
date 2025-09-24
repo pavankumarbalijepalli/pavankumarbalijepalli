@@ -123,3 +123,111 @@ This is mid-range: you could cut ~20% (budget hotels, less shopping) or add ~20%
 
 
 ---
+
+# 🇸🇬 Singapore Itinerary (7 Days, December 2025)
+**Family-friendly with a 2-year-old | Vegetarian | MRT & buses only | Relaxed pace**
+
+---
+
+## ✈️ Flights & Visa
+
+### Visa (for Indian passport holders)
+- Indian citizens **must apply in advance** (no visa on arrival).  
+- **Cost:** ~₹1,900 (tourist visa).  
+- **Apply via:** Authorized agents or directly at [ICA Singapore](https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements/visa-detail-page/india).  
+- **Documents needed:**
+  - Passport (6+ months validity)  
+  - Photo (passport size)  
+  - Return tickets & hotel booking  
+  - Bank statements / proof of funds  
+  - Completed visa application form  
+
+**Tip:** Apply 2–4 weeks before travel.
+
+### Flights (India ↔ Singapore)
+- Average roundtrip economy fares: **₹25,000 – ₹40,000 per adult**  
+- Toddler under 2: lap infant ticket (~10% of adult fare).  
+- Airlines: Singapore Airlines, Scoot, Air India, Indigo.  
+- Flight duration: ~5–6 hrs nonstop from major Indian cities (Delhi, Mumbai, Bangalore, Chennai).  
+
+---
+
+## 🗓️ Day-by-Day Plan
+
+### Day 1 — Arrival & Settle In
+- Morning/Afternoon: Arrive, check into family-friendly hotel (Orchard / Marina / Bugis area).  
+- Afternoon: Rest / nap time for toddler.  
+- Evening: Short walk to nearby park or shopping mall.  
+- Dinner: Vegetarian/Indian restaurant nearby.  
+
+---
+
+### Day 2 — Gardens & Nature
+- Morning: **Singapore Botanic Gardens** + **Children’s Garden**.  
+- Lunch: Picnic or vegetarian café.  
+- Afternoon: **National Orchid Garden**.  
+- Evening: Relax / Orchard Road lights.  
+
+---
+
+### Day 3 — Zoo / Wildlife
+- Morning: **Singapore Zoo** (arrive early, very toddler-friendly).  
+- Afternoon: Return for rest.  
+- Evening: Optional **Night Safari** (check toddler’s mood/bedtime).  
+
+---
+
+### Day 4 — Sentosa Island
+- Morning: Head to Sentosa (cable car or MRT/monorail).  
+- Activities: **S.E.A. Aquarium**, KidZania, or Sentosa beach play.  
+- Afternoon: More attractions at Sentosa.  
+- Evening: Return, vegetarian dinner in city.  
+
+---
+
+### Day 5 — Culture & City
+- Morning: Explore **Little India** (Sri Srinivasa Perumal Temple, Indian food).  
+- Afternoon: **Chinatown** (Sri Mariamman Temple, shops).  
+- Evening: **Clarke Quay** riverside walk.  
+
+---
+
+### Day 6 — Gardens by the Bay
+- Morning: **Gardens by the Bay** (Flower Dome + Cloud Forest).  
+- Afternoon: Hotel rest.  
+- Evening: **Supertree Grove light show**.  
+
+---
+
+### Day 7 — Departure
+- Morning: Last-minute shopping or quick park visit.  
+- Pack, transfer to Changi Airport.  
+- Flight back to India.  
+
+---
+
+## 💰 Budget Estimate (2 adults + toddler)
+
+| Category | Cost (SGD) | INR (approx) |
+|----------|-----------:|-------------:|
+| Flights (round trip) | 400–600 per adult | ₹25,000 – ₹40,000 each |
+| Hotel (7 nights) | 150–200/night | ₹52,500 – ₹70,000 |
+| Meals | 50–80/day | ₹17,500 – ₹28,000 |
+| Local transport | 10–20/day | ₹3,500 – ₹7,000 |
+| Attractions | 25–50 each | ₹10,000 – ₹20,000 |
+| Misc (shopping, extras) | — | ₹10,000 – ₹20,000 |
+| Visa | — | ₹1,900 |
+
+**Overall Total (mid-range):**  
+👉 **₹90,000 – ₹1,50,000 for 7 days**
+
+---
+
+## 🍼 Toddler & Family Tips
+- Carry a **foldable stroller** (MRT/buses have lifts & stroller access).  
+- Use mall kids’ play areas for downtime.  
+- Singapore is **vegetarian-friendly** — Indian, Asian, and vegan restaurants widely available.  
+- Keep midday hotel rest to avoid toddler burnout.  
+- Night Safari is optional depending on child’s bedtime comfort.  
+
+---
