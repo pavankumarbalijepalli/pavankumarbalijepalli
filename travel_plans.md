@@ -101,14 +101,14 @@ __🛒 Budget Summary (for 2 adults + toddler)__
 
 Mid-range hotels, vegetarian meals, trains, shopping & activities
 
-Item	Estimated Total (JPY)	Estimated Total (INR)
-
-Hotels (7 nights)	~140,000	~77,000
-Meals (7 days)	~52,500	~29,000
-Local transport (Tokyo)	~12,000	~6,600
-Shinkansen (Tokyo⇄Karuizawa)	~24,000	~13,200
-Activities/Shopping	~37,000	~20,000
-Overall Total	~265,500	~146,000
+|Item|Estimated Total (JPY)	|Estimated Total (INR)|
+|---|----|----|
+|Hotels (7 nights)|	~140,000	|~77,000|
+|Meals (7 days)|	~52,500|	~29,000|
+|Local transport (Tokyo)|	~12,000	|~6,600|
+|Shinkansen (Tokyo⇄Karuizawa)|	~24,000|	~13,200|
+|Activities/Shopping|	~37,000|	~20,000|
+|Overall Total	|~265,500|	~146,000|
 
 
 __💡 Notes:__
