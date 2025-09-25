@@ -432,3 +432,61 @@ This is mid-range: you could cut ~20% (budget hotels, less shopping) or add ~20%
 - Midday rest is essential to avoid heat fatigue in December afternoons (~25–30°C).  
 
 ---
+
+# 🌏 Expense Comparison — Thailand vs Vietnam vs Singapore
+**Travel Dates:** 1 Dec 2025 → 7 Dec 2025 (6N/7D)  
+**Origin:** Hyderabad (HYD)  
+**Travelers:** 2 Adults + 1 Toddler (lap seat)  
+**Meals:** Vegetarian, mid-range  
+**Shopping:** Heavy allowance included  
+**Flights:** Cheapest economy + 15kg check-in baggage  
+**Hotels:** Excluded for Thailand & Vietnam (Club Mahindra stay), Included for Singapore (4★ V Hotel Bencoolen)
+
+---
+
+## ✈️ Flights Overview
+- **Thailand**: HYD → Bangkok ; Domestic BKK → Chiang Mai ; CNX → Phuket ; Return HKT → HYD  
+- **Vietnam**: HYD → Ho Chi Minh ; Domestic SGN → Da Nang ; DAD → Hanoi ; Return HAN → HYD  
+- **Singapore**: HYD ↔ SIN (roundtrip) ; Hotel included
+
+---
+
+## 💰 Cost Breakdown (in INR)
+
+| Category | Thailand (No Stay) | Vietnam (No Stay) | Singapore (With Stay) |
+|----------|-------------------:|------------------:|----------------------:|
+| **Intl. Flights (HYD roundtrip)** | 42,000 – 54,000 | 36,000 – 48,000 | 44,000 – 60,000 |
+| **Domestic Flights** | 18,000 – 26,000 | 14,000 – 22,000 | — |
+| **Hotel (6 nights)** | — | — | 39,000 – 54,000 (V Hotel Bencoolen, 4★) |
+| **Visa Fees** | 1,500 – 3,000 | 2,000 – 3,500 | 1,900 – 2,500 |
+| **Local Transport** | 6,000 – 9,000 | 5,000 – 8,000 | 6,000 – 9,000 |
+| **Meals (Veg, mid-range)** | 14,000 – 20,000 | 12,000 – 18,000 | 18,000 – 24,000 |
+| **Activities / Tickets** | 12,000 – 20,000 | 14,000 – 22,000 | 18,000 – 28,000 |
+| **Travel Insurance** | 1,200 – 2,500 | 1,200 – 2,500 | 1,200 – 2,500 |
+| **Shopping (heavy)** | 25,000 – 45,000 | 20,000 – 40,000 | 30,000 – 50,000 |
+| **Misc (SIM, tips, etc.)** | 3,000 – 6,000 | 3,000 – 6,000 | 3,000 – 6,000 |
+| **TOTAL ESTIMATE** | **1,21,700 – 1,88,500** | **1,13,200 – 1,76,000** | **1,66,100 – 2,57,000** |
+
+---
+
+## 📊 Key Insights
+- **Vietnam (no stay)** → Lowest cost overall (~₹1.13L – ₹1.76L) due to cheap international HYD–SGN flights & affordable domestic legs.  
+- **Thailand (no stay)** → Slightly higher because of multiple domestic flights (Bangkok, Chiang Mai, Phuket).  
+- **Singapore (with stay)** → Highest (~₹1.66L – ₹2.57L), mostly due to 4★ hotel stay + generally higher attraction & meal costs.  
+
+---
+
+## 📝 Notes
+- Flight prices are **live market ranges** (Skyscanner / Expedia / airline sites) for **Dec 2025** with checked luggage.  
+- Visa costs are approximations (official + agent fee).  
+- Activities include all major attractions listed in your itineraries (Grand Palace, Night Safari, Ha Long cruise, Gardens by the Bay, Sentosa, etc.).  
+- Shopping values are deliberately **heavy** as requested.  
+- Insurance = basic family travel coverage.  
+- Singapore hotel: **V Hotel Bencoolen (4★)** chosen as the best “budget luxe” option.  
+
+---
+
+# ✅ Summary
+- **Cheapest overall:** Vietnam (~₹1.13L minimum).  
+- **Balanced / classic family trip:** Thailand (~₹1.22L+).  
+- **Premium city stay:** Singapore (~₹1.66L+ with hotel).
