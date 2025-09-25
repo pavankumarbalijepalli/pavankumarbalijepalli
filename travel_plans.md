@@ -334,3 +334,101 @@ This is mid-range: you could cut ~20% (budget hotels, less shopping) or add ~20%
 - Keep one **midday rest** daily to avoid overtiring.  
 
 ---
+
+# 🇹🇭 Thailand Itinerary (7 Days, December 2025)
+**Family-friendly with a 2-year-old | Vegetarian | Flights + Hotels (booked) | Relaxed pace**
+
+---
+
+## ✈️ Flights
+
+### International (India ↔ Thailand)
+- Roundtrip fares: **₹18,000 – ₹30,000 per adult** (economy, nonstop from Delhi/Mumbai/Bangalore/Chennai).  
+- Toddler under 2: lap infant ticket (~10% of adult fare).  
+- Duration: ~4–5 hrs nonstop.  
+- Airlines: Thai Airways, Air India, Indigo, VietJet.  
+
+### Domestic (within Thailand)
+- Internal flights (Bangkok ↔ Chiang Mai ↔ Phuket): **₹3,500 – ₹6,000 per person per leg**.  
+- Toddler usually free / minimal charge.  
+- Duration: ~1–1.5 hrs.  
+
+---
+
+## 🗓️ Day-by-Day Plan
+
+### Day 1 — Arrival in Bangkok
+- Morning/Afternoon: Arrive, check into hotel (already booked).  
+- Afternoon: Rest & nap for toddler.  
+- Evening: Visit **Asiatique Riverfront** (open-air mall + Ferris wheel, stroller-friendly).  
+- Dinner: Indian / vegetarian restaurant nearby.  
+
+---
+
+### Day 2 — Bangkok: Culture & Family
+- Morning: **Grand Palace & Wat Pho** (short visit, wide grounds).  
+- Lunch: Vegetarian Thai meal (pad thai, curries without fish sauce).  
+- Afternoon: Hotel rest.  
+- Evening: **ICONSIAM Mall** (indoor play areas, river views).  
+
+---
+
+### Day 3 — Day Trip to Ayutthaya (Optional)
+- Morning: Short train or private car to **Ayutthaya** (ancient temples, stroller manageable).  
+- Afternoon: Explore ruins briefly, return to Bangkok for toddler nap.  
+- Evening: Light shopping near hotel.  
+
+---
+
+### Day 4 — Fly to Chiang Mai
+- Morning: Flight Bangkok → Chiang Mai (~1.5 hr).  
+- Afternoon: Rest at hotel.  
+- Evening: **Chiang Mai Night Bazaar** (lanterns, relaxed stroll).  
+
+---
+
+### Day 5 — Chiang Mai: Nature & Animals
+- Morning: **Chiang Mai Zoo & Aquarium** (kids love it, stroller friendly).  
+- Afternoon: Lunch & hotel rest.  
+- Evening: **Old City temples** (Wat Chedi Luang) — easy short visit.  
+
+---
+
+### Day 6 — Fly to Phuket
+- Morning: Flight Chiang Mai → Phuket (~2 hrs).  
+- Afternoon: Relax at hotel / beach.  
+- Evening: **Patong Beach promenade** (gentle walk, toddler play).  
+
+---
+
+### Day 7 — Phuket & Departure
+- Morning: **Phuket Aquarium** or toddler-safe **beach play at Kata Beach**.  
+- Afternoon: Last-minute shopping.  
+- Evening: Flight home from Phuket (or connect via Bangkok).  
+
+---
+
+## 💰 Budget Estimate (2 adults + toddler, excl. hotels)
+
+| Category | Cost (THB / USD) | INR (approx) |
+|----------|-----------------:|-------------:|
+| International flights (India ↔ Thailand) | ~$400–600 per adult | ₹18,000 – ₹30,000 each |
+| Domestic flights (2 internal legs) | ~$80–120 per adult | ₹7,000 – ₹10,000 each |
+| Meals (vegetarian, 7 days) | ~$20–25 per day | ₹10,000 – ₹13,000 total |
+| Transport (taxis, Grab, transfers) | ~$10–15 per day | ₹5,000 – ₹7,000 total |
+| Attractions / tickets / tours | ~$100–120 | ₹8,000 – ₹10,000 total |
+| Misc (shopping, extras) | — | ₹10,000 – ₹15,000 |
+
+**Overall Total (without hotels):**  
+👉 **₹80,000 – ₹1,10,000 for 7 days**
+
+---
+
+## 🍼 Toddler & Family Tips
+- **Stroller-friendly**: Bangkok malls, riverfront, Chiang Mai zoo, Phuket aquariums.  
+- For temples: use **baby carrier** (some steps, stroller not ideal inside).  
+- Vegetarian meals: Request “**jay**” (vegetarian, no meat/fish) or “**mangsawirat**” (vegan). Many Indian restaurants in Bangkok, Chiang Mai, Phuket.  
+- Beaches: Stick to calmer ones (Kata, Karon) with toddler.  
+- Midday rest is essential to avoid heat fatigue in December afternoons (~25–30°C).  
+
+---
