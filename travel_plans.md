@@ -587,3 +587,70 @@ This is mid-range: you could cut ~20% (budget hotels, less shopping) or add ~20%
 - Cable car & safari are stroller- and kid-friendly.  
 
 ---
+
+🌴 **7-Day Chill + Shopping + Activities Itinerary — Phú Quốc**
+
+📍 Base: Long Beach (good resorts + close to markets)
+
+---
+
+**Day 1 – Arrival & Easy Start**
+☀️ Morning: Arrive & check-in  
+🌊 Afternoon: Swim / pool chill at Long Beach  
+🌙 Evening: 🛍️ Duong Dong Night Market (clothes, street food)  
+✨ Vibe: Ease into island life + first shopping round
+
+---
+
+**Day 2 – Long Beach & Spa**
+☀️ Morning: Beach swim at Long Beach  
+🌊 Afternoon: Kayaking / paddleboarding + spa massage  
+🌙 Evening: Sunset dinner + drinks at Coco Bar  
+✨ Vibe: Relaxed, chill, a touch of activity
+
+---
+
+**Day 3 – Sao Beach + Adventure**
+☀️ Morning: Head south to Sao Beach (turquoise paradise)  
+🌊 Afternoon: Try jet ski / parasailing / banana boat  
+🌙 Evening: 🛍️ Explore Grand World (shopping + Venice canal show)  
+✨ Vibe: Paradise beach + water sports + colorful shopping
+
+---
+
+**Day 4 – Island-Hopping Tour**
+☀️ Morning: Boat trip to An Thới Archipelago  
+🌊 Afternoon: Snorkeling, fishing, lunch on the boat  
+🌙 Evening: Sunset back at Long Beach  
+✨ Vibe: Adventure day + underwater fun
+
+---
+
+**Day 5 – Ong Lang & Cooking Class**
+☀️ Morning: Yoga/swim at Ong Lang Beach  
+🌊 Afternoon: Join a Vietnamese cooking class (with market visit)  
+🌙 Evening: Eat your own cooked meal or resort dinner  
+✨ Vibe: Hands-on cultural activity + boutique beach chill
+
+---
+
+**Day 6 – Starfish Beach + Nature**
+☀️ Morning: Visit Rạch Vẹm (Starfish Beach, wooden piers)  
+🌊 Afternoon: Explore Phú Quốc National Park (light trekking)  
+🌙 Evening: 🛍️ Dinh Cậu Night Market (final shopping)  
+✨ Vibe: Nature + authentic local vibes
+
+---
+
+**Day 7 – Pepper, Pearls & Departure**
+☀️ Morning: Visit a pepper farm + pearl farm (souvenirs)  
+🌊 Afternoon: Last ocean view coffee + packing  
+🌙 Evening: Departure flight/ferry  
+✨ Vibe: Rustic + elegant local products, gentle wind-down
+
+---
+
+✅ Highlights for You:
+- Chill beaches: Long Beach, Sao Beach, Ong Lang, Starfish Beach  
+- Shopping clothes: Duong Dong & Dinh Cậu Night Markets, Grand World boutiques  
+- Activities: Water sports, island-hopping, cooking class, snorkeling, trekking
