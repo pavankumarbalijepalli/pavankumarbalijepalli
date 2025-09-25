@@ -490,3 +490,100 @@ This is mid-range: you could cut ~20% (budget hotels, less shopping) or add ~20%
 - **Cheapest overall:** Vietnam (~₹1.13L minimum).  
 - **Balanced / classic family trip:** Thailand (~₹1.22L+).  
 - **Premium city stay:** Singapore (~₹1.66L+ with hotel).
+
+---
+
+# 🇻🇳 Vietnam Itinerary (Phu Quoc Focus, 7 Days, Dec 2025)
+**Family-friendly with a 2-year-old | Vegetarian | Without stay (Club Mahindra)**  
+**Dates:** 1 Dec – 7 Dec 2025 | **Origin:** Hyderabad (HYD)
+
+---
+
+## ✈️ Flights
+
+### International (India ↔ Vietnam)
+- HYD → Ho Chi Minh City (SGN) → connecting flight to Phu Quoc (PQC).  
+- Return: PQC → SGN → HYD.  
+- **Roundtrip fares (cheapest economy with 15kg check-in):**  
+  - HYD ↔ SGN: ₹9,000 – ₹13,000 per adult.  
+  - SGN ↔ PQC (domestic): ₹3,000 – ₹5,000 per adult (one-way).  
+- Toddler lap seat: ~10% of adult fare.  
+
+---
+
+## 🗓️ Day-by-Day Plan
+
+### Day 1 — Arrival in Phu Quoc
+- Morning: HYD → SGN, connecting flight SGN → PQC.  
+- Afternoon: Check-in (Club Mahindra). Rest after travel.  
+- Evening: Gentle stroll at **Long Beach** (safe, shallow water).  
+- Dinner: Hotel / local vegetarian restaurant.  
+
+---
+
+### Day 2 — Beaches & Relax
+- Morning: Relax at **Sao Beach** — toddler-friendly soft sand.  
+- Afternoon: Nap at resort.  
+- Evening: Explore **Dinh Cau Night Market** for vegetarian street snacks & souvenirs.  
+
+---
+
+### Day 3 — Nature & Fun
+- Morning: **Vinpearl Safari** (zoo & open safari — kids love it).  
+- Afternoon: VinWonders theme park (choose kid-safe zones, stroller-friendly).  
+- Evening: Return to hotel, rest.  
+
+---
+
+### Day 4 — Cable Car & Islands
+- Morning: Take the **Hon Thom Cable Car** (world’s longest sea cable car) — amazing views, fun for toddlers.  
+- Afternoon: Explore **Sun World Hon Thom Nature Park** (gentle activities, play zones).  
+- Evening: Dinner & resort relaxation.  
+
+---
+
+### Day 5 — Culture & Local Exploration
+- Morning: Visit **Ham Ninh Fishing Village** (walk around, photo spots).  
+- Afternoon: Pepper farm tour (Phu Quoc is famous for pepper) — short, easy with kids.  
+- Evening: Return, relax by the beach.  
+
+---
+
+### Day 6 — Leisure Day
+- Morning: Resort leisure, swimming pool time.  
+- Afternoon: Shopping for souvenirs (pearl shops, handicrafts).  
+- Evening: Sunset at **Ong Lang Beach**.  
+
+---
+
+### Day 7 — Departure
+- Morning: PQC → SGN → HYD flights.  
+- Afternoon/Evening: Arrive home.  
+
+---
+
+## 💰 Expense Estimate (INR, Without Stay)
+
+| Category | Cost (INR) |
+|----------|-----------:|
+| **Intl. Flights HYD ↔ SGN** | 18,000 – 26,000 |
+| **Domestic Flights SGN ↔ PQC** | 12,000 – 18,000 |
+| **Visa (Vietnam e-visa)** | 2,000 – 3,500 |
+| **Local Transport (7 days)** | 5,000 – 8,000 |
+| **Meals (Vegetarian)** | 12,000 – 18,000 |
+| **Activities / Tickets** | 14,000 – 22,000 |
+| **Travel Insurance** | 1,200 – 2,500 |
+| **Shopping (heavy)** | 20,000 – 40,000 |
+| **Misc (SIM, tips, etc.)** | 3,000 – 6,000 |
+| **TOTAL (Phu Quoc, no stay)** | **87,200 – 1,44,000** |
+
+---
+
+## 🍼 Toddler & Family Tips
+- Beaches are toddler-safe (shallow & calm), but bring UV protection & beach shoes.  
+- Use foldable stroller for markets & parks.  
+- Vegetarian food: request “ăn chay” (Vietnamese for vegetarian). Carry toddler snacks for excursions.  
+- Keep midday nap times at the hotel to avoid burnout.  
+- Cable car & safari are stroller- and kid-friendly.  
+
+---
