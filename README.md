@@ -2,10 +2,14 @@
   <img src="./top.png" alt="Top banner" width="100%" />
 </p>
 
-<p align="center">
-  <b>AI Engineer • 6+ Years in Data Science</b><br/>
-  Building practical AI systems that solve real-world business problems.
-</p>
+---
+
+I am an **AI Engineer** with **6 years of experience in Data Science**, focused on designing and shipping AI-first solutions.
+
+My work centers around:
+- 🤖 Applied AI and machine learning systems
+- 📊 Data science workflows from exploration to deployment
+- 🧠 Building intelligent products with measurable impact
 
 <p align="center">
   <a href="https://github.com/pavankumarbalijepalli?tab=repositories">
@@ -15,15 +19,6 @@
     <img src="https://img.shields.io/badge/Connect-Linkedin-blue?logo=linkedin" alt="LinkedIn" />
   </a>
 </p>
-
----
-
-I am an **AI Engineer** with **6 years of experience in Data Science**, focused on designing and shipping AI-first solutions.
-
-My work centers around:
-- 🤖 Applied AI and machine learning systems
-- 📊 Data science workflows from exploration to deployment
-- 🧠 Building intelligent products with measurable impact
 
 ---
 
