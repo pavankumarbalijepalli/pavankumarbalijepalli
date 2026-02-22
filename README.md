@@ -2,9 +2,7 @@
   <img src="./top.png" alt="Top banner" width="100%" />
 </p>
 
----
-
-I am an **AI Engineer** with **6 years of experience in Data Science**, focused on designing and shipping AI-first solutions.
+I am an **AI Engineer** with **6+ years of experience in Data Science**, focused on designing and shipping AI-first solutions.
 
 My work centers around:
 - 🤖 Applied AI and machine learning systems
@@ -13,16 +11,25 @@ My work centers around:
 
 <p align="center">
   <a href="https://github.com/pavankumarbalijepalli?tab=repositories">
-    <img src="https://img.shields.io/badge/Github-Repositories-blue?logo=github" alt="AI Portfolio" />
+    <img src="https://img.shields.io/badge/Git-Repositories-black?style=for-the-badge" alt="AI Portfolio" />
   </a>
+  
   <a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/">
-    <img src="https://img.shields.io/badge/Connect-Linkedin-blue?logo=linkedin" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/Linkedin-Profile-blue?style=for-the-badge" alt="LinkedIn" />
   </a>
+
+  <a href="https://huggingface.co/pavankumarbalijepalli">
+    <img src="https://img.shields.io/badge/HuggingFace-Models-yellow?style=for-the-badge" alt="LinkedIn" />
+  </a>
+
+<!--  <a href="https://huggingface.co/pavankumarbalijepalli">
+    <img src="https://img.shields.io/badge/HuggingFace-Models-yellow?style=for-the-badge" alt="LinkedIn" />
+  </a> -->
 </p>
 
 ---
 
-<table>
+<table align="center">
   <tr>
     <td><b>Machine Learning & AI</b></td>
     <td>Model development, experimentation, and evaluation for real use cases.</td>
@@ -39,7 +46,7 @@ My work centers around:
 
 ---
 
-### [kuwt](https://github.com/pavankumarbalijepalli/kuwt)
+### Favourite Repository: [@kuwt](https://github.com/pavankumarbalijepalli/kuwt)
 AI-focused project work that reflects my approach to building applied intelligent solutions.
 
 ---
@@ -82,8 +89,12 @@ AI-focused project work that reflects my approach to building applied intelligen
 
 ---
 
-- LinkedIn: [@pavan-kumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
-- For quick questions, open an issue on any repository.
+### Connect with me!
+- Hit a Follow on Github!
+- Raise an issue on [this](https://github.com/pavankumarbalijepalli/connect-with-me) repository.
+- Ping me on Linkedin.
+
+---
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=pavankumarbalijepalli&color=blue&style=flat" alt="Profile Views" />
