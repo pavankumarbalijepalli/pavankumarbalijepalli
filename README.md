@@ -1,64 +1,71 @@
-<h1 align="center">✨ Pavan Kumar Balijepalli ✨</h1>
 <p align="center">
-  <b>Data Scientist • Builder • Curious Learner</b><br/>
-  Turning ideas into practical projects, one repository at a time.
+  <img src="./top.png" alt="Top banner" width="100%" />
+</p>
+
+<p align="center">
+  <b>AI Engineer • 6+ Years in Data Science</b><br/>
+  Building practical AI systems that solve real-world business problems.
 </p>
 
 <p align="center">
   <a href="https://github.com/pavankumarbalijepalli?tab=repositories">
-    <img src="https://img.shields.io/badge/Explore-Repositories-181717?style=for-the-badge&logo=github" alt="Explore Repositories"/>
+    <img src="https://img.shields.io/badge/Github-Repositories-blue?logo=github" alt="AI Portfolio" />
   </a>
   <a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/">
-    <img src="https://img.shields.io/badge/Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
-  </a>
-  <a href="https://github.com/pavankumarbalijepalli/react-monsters-rolodex">
-    <img src="https://img.shields.io/badge/Featured-React%20Monsters%20Rolodex-61DAFB?style=for-the-badge&logo=react&logoColor=000" alt="Featured Repo"/>
+    <img src="https://img.shields.io/badge/Connect-Linkedin-blue?logo=linkedin" alt="LinkedIn" />
   </a>
 </p>
 
 ---
 
-<h2>👋 About Me</h2>
-<ul>
-  <li>📊 I’m a <b>Data Scientist</b> focused on learning through hands-on projects.</li>
-  <li>🧠 I use this profile as a portfolio of experiments, practice builds, and problem-solving work.</li>
-  <li>⭐ If a repository helped you, a star always makes my day.</li>
-</ul>
+I am an **AI Engineer** with **6 years of experience in Data Science**, focused on designing and shipping AI-first solutions.
 
-<h2>🧰 What You'll Find in My Repositories</h2>
+My work centers around:
+- 🤖 Applied AI and machine learning systems
+- 📊 Data science workflows from exploration to deployment
+- 🧠 Building intelligent products with measurable impact
+
+---
 
 <table>
   <tr>
-    <td>📈 <b>Data Science</b></td>
-    <td>Applied notebooks, analysis workflows, and model experiments.</td>
+    <td><b>Machine Learning & AI</b></td>
+    <td>Model development, experimentation, and evaluation for real use cases.</td>
   </tr>
   <tr>
-    <td>⚛️ <b>Frontend Practice</b></td>
-    <td>Interactive UI builds and React-based mini projects.</td>
+    <td><b>Data Science Practice</b></td>
+    <td>Data preparation, feature engineering, insight generation, and predictive analytics.</td>
   </tr>
   <tr>
-    <td>🛠️ <b>Learning Projects</b></td>
-    <td>Small builds where I explore tools, frameworks, and implementation patterns.</td>
+    <td><b>Production-minded AI</b></td>
+    <td>Projects built with a strong focus on practical outcomes and usability.</td>
   </tr>
 </table>
 
-<h2>🌟 Highlight</h2>
-<p>
-  <b><a href="https://github.com/pavankumarbalijepalli/react-monsters-rolodex">react-monsters-rolodex</a></b><br/>
-  A fun React project that reflects my frontend learning journey and experimentation.
-</p>
+---
 
-<h2>🎯 Beyond Coding</h2>
-<ul>
-  <li>🎮 I enjoy video games.</li>
-  <li>✍️ I sketch to keep my mind at peace.</li>
-</ul>
+### [kuwt](https://github.com/pavankumarbalijepalli/kuwt)
+AI-focused project work that reflects my approach to building applied intelligent solutions.
 
-<h2>📬 Reach Me</h2>
-<ul>
-  <li>👔 LinkedIn: <a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/">@pavan-kumar-balijepalli</a></li>
-  <li>🐤 Fastest way to get my attention: open an issue on a repo (yes, really 😄).</li>
-</ul>
+---
+### My Tech Stack
+<div align="center">
+  <img src="https://img.shields.io/badge/Python-black?logo=python" alt="AI Portfolio" />
+  <img src="https://img.shields.io/badge/Finetuning-LLMs-black?logo=ollama"/>
+  <img src="https://img.shields.io/badge/RAG-Systems-green?logo=mongodb"/>
+  <img src="https://img.shields.io/badge/Agents-Workflows-purple?logo=githubcopilot"/>
+  <img src="https://img.shields.io/badge/LangChain-Orchestration-orange?logo=langchain"/>
+  <img src="https://img.shields.io/badge/Gemini-AI-lavender?logo=googlegemini"/>
+</div>
+<div align="center">
+  <img src="https://img.shields.io/badge/Open-AI-brown?logo=openaigym"/>
+  <img src="https://img.shields.io/badge/SQL-white?logo=mysql" alt="AI Portfolio" />
+  <img src="https://img.shields.io/badge/HuggingFace-Models-yellow?logo=huggingface"/>
+  <img src="https://img.shields.io/badge/Streamlit-Apps-red?logo=streamlit"/>
+  <img src="https://img.shields.io/badge/RAG-Systems-green?logo=mongodb"/>
+  <img src="https://img.shields.io/badge/Flask-APIs-cyan?logo=flask"/>
+  <img src="https://img.shields.io/badge/Open-CV-cyan?logo=opencv"/>
+</div>
 
 ---
 
@@ -72,19 +79,21 @@
   </a>
 </p>
 
----
-
-## 📈 GitHub AI Snapshot
 <p align="center">
   <a href="https://git.io/streak-stats">
     <img src="https://streak-stats.demolab.com?user=pavankumarbalijepalli&card_width=770" alt="GitHub Streak" />
   </a>
 </p>
 
+---
+
+- LinkedIn: [@pavan-kumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
+- For quick questions, open an issue on any repository.
+
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=pavankumarbalijepalli&color=blue&style=flat" alt="Profile Views" />
 </p>
 
-<!--
-This repository is special: its README appears on the GitHub profile.
--->
+<p align="center">
+  <img src="./bottom.png" alt="Bottom banner" width="100%" />
+</p>
