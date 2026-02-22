@@ -1,60 +1,67 @@
+<h1 align="center">✨ Pavan Kumar Balijepalli ✨</h1>
 <p align="center">
-  <img src="./background_linkedin.png" alt="Top banner" width="100%" />
-</p>
-
-<h1 align="center">Pavan Kumar Balijepalli</h1>
-<p align="center">
-  <b>AI Engineer • 6+ Years in Data Science</b><br/>
-  Building practical AI systems that solve real-world business problems.
+  <b>Data Scientist • Builder • Curious Learner</b><br/>
+  Turning ideas into practical projects, one repository at a time.
 </p>
 
 <p align="center">
   <a href="https://github.com/pavankumarbalijepalli?tab=repositories">
-    <img src="https://img.shields.io/badge/AI%20Portfolio-Explore%20Projects-111827?style=for-the-badge&logo=github" alt="AI Portfolio" />
+    <img src="https://img.shields.io/badge/Explore-Repositories-181717?style=for-the-badge&logo=github" alt="Explore Repositories"/>
   </a>
   <a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/">
-    <img src="https://img.shields.io/badge/Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
+    <img src="https://img.shields.io/badge/Connect-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/>
+  </a>
+  <a href="https://github.com/pavankumarbalijepalli/react-monsters-rolodex">
+    <img src="https://img.shields.io/badge/Featured-React%20Monsters%20Rolodex-61DAFB?style=for-the-badge&logo=react&logoColor=000" alt="Featured Repo"/>
   </a>
 </p>
 
 ---
 
-## 👋 About Me
-I am an **AI Engineer** with **6 years of experience in Data Science**, focused on designing and shipping AI-first solutions.
+<h2>👋 About Me</h2>
+<ul>
+  <li>📊 I’m a <b>Data Scientist</b> focused on learning through hands-on projects.</li>
+  <li>🧠 I use this profile as a portfolio of experiments, practice builds, and problem-solving work.</li>
+  <li>⭐ If a repository helped you, a star always makes my day.</li>
+</ul>
 
-My work centers around:
-- 🤖 Applied AI and machine learning systems
-- 📊 Data science workflows from exploration to deployment
-- 🧠 Building intelligent products with measurable impact
-
----
-
-## 🧰 AI Portfolio Focus
+<h2>🧰 What You'll Find in My Repositories</h2>
 
 <table>
   <tr>
-    <td><b>Machine Learning & AI</b></td>
-    <td>Model development, experimentation, and evaluation for real use cases.</td>
+    <td>📈 <b>Data Science</b></td>
+    <td>Applied notebooks, analysis workflows, and model experiments.</td>
   </tr>
   <tr>
-    <td><b>Data Science Practice</b></td>
-    <td>Data preparation, feature engineering, insight generation, and predictive analytics.</td>
+    <td>⚛️ <b>Frontend Practice</b></td>
+    <td>Interactive UI builds and React-based mini projects.</td>
   </tr>
   <tr>
-    <td><b>Production-minded AI</b></td>
-    <td>Projects built with a strong focus on practical outcomes and usability.</td>
+    <td>🛠️ <b>Learning Projects</b></td>
+    <td>Small builds where I explore tools, frameworks, and implementation patterns.</td>
   </tr>
 </table>
 
+<h2>🌟 Highlight</h2>
+<p>
+  <b><a href="https://github.com/pavankumarbalijepalli/react-monsters-rolodex">react-monsters-rolodex</a></b><br/>
+  A fun React project that reflects my frontend learning journey and experimentation.
+</p>
+
+<h2>🎯 Beyond Coding</h2>
+<ul>
+  <li>🎮 I enjoy video games.</li>
+  <li>✍️ I sketch to keep my mind at peace.</li>
+</ul>
+
+<h2>📬 Reach Me</h2>
+<ul>
+  <li>👔 LinkedIn: <a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/">@pavan-kumar-balijepalli</a></li>
+  <li>🐤 Fastest way to get my attention: open an issue on a repo (yes, really 😄).</li>
+</ul>
+
 ---
 
-## 🌟 Featured Repository
-### [kundelu_ai](https://github.com/pavankumarbalijepalli/kundelu_ai)
-AI-focused project work that reflects my approach to building applied intelligent solutions.
-
----
-
-## 📈 GitHub AI Snapshot
 <p align="center">
   <a href="https://github.com/pavankumarbalijepalli?tab=repositories">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=pavankumarbalijepalli&langs_count=6&layout=compact" alt="Top Languages" />
@@ -65,22 +72,19 @@ AI-focused project work that reflects my approach to building applied intelligen
   </a>
 </p>
 
+---
+
+## 📈 GitHub AI Snapshot
 <p align="center">
   <a href="https://git.io/streak-stats">
     <img src="https://streak-stats.demolab.com?user=pavankumarbalijepalli&card_width=770" alt="GitHub Streak" />
   </a>
 </p>
 
----
-
-## 📬 Reach Me
-- LinkedIn: [@pavan-kumar-balijepalli](https://www.linkedin.com/in/pavan-kumar-balijepalli/)
-- For quick questions, open an issue on any repository.
-
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=pavankumarbalijepalli&color=blue&style=flat" alt="Profile Views" />
 </p>
 
-<p align="center">
-  <img src="./kundelu_ai.png" alt="Bottom banner" width="100%" />
-</p>
+<!--
+This repository is special: its README appears on the GitHub profile.
+-->
