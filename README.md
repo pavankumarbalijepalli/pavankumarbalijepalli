@@ -47,7 +47,7 @@ My work centers around:
 ---
 
 ### Favourite Repository: [@kuwt](https://github.com/pavankumarbalijepalli/kuwt)
-AI-focused project work that reflects my approach to building applied intelligent solutions.
+KUWT is an AI-powered content generation automation platform designed to keep technology enthusiasts and learners up-to-date with the latest developments in AI and technology.
 
 ---
 ### My Tech Stack
@@ -93,8 +93,6 @@ AI-focused project work that reflects my approach to building applied intelligen
 - Hit a Follow on Github!
 - Raise an issue on [this](https://github.com/pavankumarbalijepalli/connect-with-me) repository.
 - Ping me on Linkedin.
-
----
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=pavankumarbalijepalli&color=blue&style=flat" alt="Profile Views" />
