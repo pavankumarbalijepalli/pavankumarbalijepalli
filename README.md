@@ -6,7 +6,7 @@
 <i>AI Engineer — building things that think, ship, and hold up in production.</i>
 </p>
 
-<img src="https://img.shields.io/badge/AI%20Engineer-6%2B%20Years%20in%20Data%20Science-7C8C6E?style=for-the-badge&labelColor=33402F" alt="AI Engineer" />
+<img src="https://img.shields.io/badge/AI%20Engineer-7%2B%20Years%20in%20Data%20Science-7C8C6E?style=for-the-badge&labelColor=33402F" alt="AI Engineer" />
 
 </div>
 
