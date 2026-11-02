@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1219 634" width="1219" height="634" role="img" aria-labelledby="t d" xml:space="preserve">
+<title id="t">Bunny, thinking</title>
+<desc id="d">Animated ASCII art: a bunny peeking over a laptop, thinking in neural networks, next to a terminal introducing Pavan Kumar Balijepalli (Bunny), Lead Data Scientist / AI Lead at Cigna.</desc>
+<style>
+text{font-family:ui-monospace, 'JetBrains Mono', 'Cascadia Mono', SFMono-Regular, Menlo, Monaco, 'DejaVu Sans Mono', 'Liberation Mono', 'Courier New', monospace;font-size:14px;white-space:pre;font-variant-ligatures:none;font-feature-settings:'liga' 0,'calt' 0}
+
+.p{fill:#E8EDF2} .m{fill:#7E9CC4} .d{fill:#46566E}
+.cur{animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{fill-opacity:0}}
+.curwrap{animation:cw 22.0s linear infinite}
+@keyframes cw{0%,59.76%{opacity:0}59.77%,95.49%{opacity:1}95.5%,100%{opacity:0}}
+.open{animation:eo 5s infinite} .shut{animation:es 5s infinite;opacity:0}
+@keyframes eo{0%,92%,97%,100%{opacity:1}93%,96%{opacity:0}}
+@keyframes es{0%,92%,97%,100%{opacity:0}93%,96%{opacity:1}}
+.node0,.node1,.node2,.node3{animation:pulse 2.4s ease-in-out infinite}
+.node1{animation-delay:.3s} .node2{animation-delay:.6s} .node3{animation-delay:.9s}
+@keyframes pulse{0%,100%{fill:#46566E}35%{fill:#E8EDF2}60%{fill:#7E9CC4}}
+.bub0,.bub1,.bub2{animation:bub 3s ease-in-out infinite}
+.bub1{animation-delay:.4s} .bub2{animation-delay:.8s}
+@keyframes bub{0%,100%{fill-opacity:.25}40%{fill-opacity:1}}
+.tw0,.tw1,.tw2,.tw3{animation:tw 4s ease-in-out infinite}
+.tw1{animation-delay:1s} .tw2{animation-delay:2.2s} .tw3{animation-delay:3.1s}
+@keyframes tw{0%,100%{fill-opacity:.25}50%{fill-opacity:1}}
+.k1{animation:k1 22.0s linear infinite}@keyframes k1{0%,2.72%{fill-opacity:0}2.73%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k2{animation:k2 22.0s linear infinite}@keyframes k2{0%,3.04%{fill-opacity:0}3.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k3{animation:k3 22.0s linear infinite}@keyframes k3{0%,3.35%{fill-opacity:0}3.36%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k4{animation:k4 22.0s linear infinite}@keyframes k4{0%,3.67%{fill-opacity:0}3.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k5{animation:k5 22.0s linear infinite}@keyframes k5{0%,3.99%{fill-opacity:0}4.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k6{animation:k6 22.0s linear infinite}@keyframes k6{0%,4.31%{fill-opacity:0}4.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k7{animation:k7 22.0s linear infinite}@keyframes k7{0%,4.63%{fill-opacity:0}4.64%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k8{animation:k8 22.0s linear infinite}@keyframes k8{0%,6.90%{fill-opacity:0}6.91%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k9{animation:k9 22.0s linear infinite}@keyframes k9{0%,7.44%{fill-opacity:0}7.45%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k10{animation:k10 22.0s linear infinite}@keyframes k10{0%,7.99%{fill-opacity:0}8.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k11{animation:k11 22.0s linear infinite}@keyframes k11{0%,11.26%{fill-opacity:0}11.27%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k12{animation:k12 22.0s linear infinite}@keyframes k12{0%,11.58%{fill-opacity:0}11.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k13{animation:k13 22.0s linear infinite}@keyframes k13{0%,11.90%{fill-opacity:0}11.91%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k14{animation:k14 22.0s linear infinite}@keyframes k14{0%,12.22%{fill-opacity:0}12.23%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k15{animation:k15 22.0s linear infinite}@keyframes k15{0%,12.54%{fill-opacity:0}12.55%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k16{animation:k16 22.0s linear infinite}@keyframes k16{0%,12.85%{fill-opacity:0}12.86%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k17{animation:k17 22.0s linear infinite}@keyframes k17{0%,13.17%{fill-opacity:0}13.18%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k18{animation:k18 22.0s linear infinite}@keyframes k18{0%,13.49%{fill-opacity:0}13.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k19{animation:k19 22.0s linear infinite}@keyframes k19{0%,13.81%{fill-opacity:0}13.82%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k20{animation:k20 22.0s linear infinite}@keyframes k20{0%,14.13%{fill-opacity:0}14.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k21{animation:k21 22.0s linear infinite}@keyframes k21{0%,14.44%{fill-opacity:0}14.45%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k22{animation:k22 22.0s linear infinite}@keyframes k22{0%,14.76%{fill-opacity:0}14.77%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k23{animation:k23 22.0s linear infinite}@keyframes k23{0%,17.04%{fill-opacity:0}17.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k24{animation:k24 22.0s linear infinite}@keyframes k24{0%,17.58%{fill-opacity:0}17.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k25{animation:k25 22.0s linear infinite}@keyframes k25{0%,18.13%{fill-opacity:0}18.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k26{animation:k26 22.0s linear infinite}@keyframes k26{0%,18.67%{fill-opacity:0}18.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k27{animation:k27 22.0s linear infinite}@keyframes k27{0%,19.22%{fill-opacity:0}19.23%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k28{animation:k28 22.0s linear infinite}@keyframes k28{0%,22.49%{fill-opacity:0}22.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k29{animation:k29 22.0s linear infinite}@keyframes k29{0%,22.81%{fill-opacity:0}22.82%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k30{animation:k30 22.0s linear infinite}@keyframes k30{0%,23.13%{fill-opacity:0}23.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k31{animation:k31 22.0s linear infinite}@keyframes k31{0%,23.44%{fill-opacity:0}23.45%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k32{animation:k32 22.0s linear infinite}@keyframes k32{0%,23.76%{fill-opacity:0}23.77%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k33{animation:k33 22.0s linear infinite}@keyframes k33{0%,24.08%{fill-opacity:0}24.09%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k34{animation:k34 22.0s linear infinite}@keyframes k34{0%,24.40%{fill-opacity:0}24.41%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k35{animation:k35 22.0s linear infinite}@keyframes k35{0%,24.72%{fill-opacity:0}24.73%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k36{animation:k36 22.0s linear infinite}@keyframes k36{0%,25.04%{fill-opacity:0}25.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k37{animation:k37 22.0s linear infinite}@keyframes k37{0%,25.35%{fill-opacity:0}25.36%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k38{animation:k38 22.0s linear infinite}@keyframes k38{0%,25.67%{fill-opacity:0}25.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k39{animation:k39 22.0s linear infinite}@keyframes k39{0%,25.99%{fill-opacity:0}26.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k40{animation:k40 22.0s linear infinite}@keyframes k40{0%,26.31%{fill-opacity:0}26.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k41{animation:k41 22.0s linear infinite}@keyframes k41{0%,26.63%{fill-opacity:0}26.64%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k42{animation:k42 22.0s linear infinite}@keyframes k42{0%,26.94%{fill-opacity:0}26.95%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k43{animation:k43 22.0s linear infinite}@keyframes k43{0%,27.26%{fill-opacity:0}27.27%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k44{animation:k44 22.0s linear infinite}@keyframes k44{0%,27.58%{fill-opacity:0}27.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k45{animation:k45 22.0s linear infinite}@keyframes k45{0%,29.85%{fill-opacity:0}29.86%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k46{animation:k46 22.0s linear infinite}@keyframes k46{0%,30.40%{fill-opacity:0}30.41%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k47{animation:k47 22.0s linear infinite}@keyframes k47{0%,33.67%{fill-opacity:0}33.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k48{animation:k48 22.0s linear infinite}@keyframes k48{0%,33.99%{fill-opacity:0}34.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k49{animation:k49 22.0s linear infinite}@keyframes k49{0%,34.31%{fill-opacity:0}34.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k50{animation:k50 22.0s linear infinite}@keyframes k50{0%,34.63%{fill-opacity:0}34.64%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k51{animation:k51 22.0s linear infinite}@keyframes k51{0%,34.94%{fill-opacity:0}34.95%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k52{animation:k52 22.0s linear infinite}@keyframes k52{0%,35.26%{fill-opacity:0}35.27%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k53{animation:k53 22.0s linear infinite}@keyframes k53{0%,35.58%{fill-opacity:0}35.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k54{animation:k54 22.0s linear infinite}@keyframes k54{0%,35.90%{fill-opacity:0}35.91%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k55{animation:k55 22.0s linear infinite}@keyframes k55{0%,36.22%{fill-opacity:0}36.23%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k56{animation:k56 22.0s linear infinite}@keyframes k56{0%,36.54%{fill-opacity:0}36.55%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k57{animation:k57 22.0s linear infinite}@keyframes k57{0%,36.85%{fill-opacity:0}36.86%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k58{animation:k58 22.0s linear infinite}@keyframes k58{0%,37.17%{fill-opacity:0}37.18%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k59{animation:k59 22.0s linear infinite}@keyframes k59{0%,37.49%{fill-opacity:0}37.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k60{animation:k60 22.0s linear infinite}@keyframes k60{0%,37.81%{fill-opacity:0}37.82%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k61{animation:k61 22.0s linear infinite}@keyframes k61{0%,38.13%{fill-opacity:0}38.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k62{animation:k62 22.0s linear infinite}@keyframes k62{0%,38.44%{fill-opacity:0}38.45%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k63{animation:k63 22.0s linear infinite}@keyframes k63{0%,38.76%{fill-opacity:0}38.77%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k64{animation:k64 22.0s linear infinite}@keyframes k64{0%,39.08%{fill-opacity:0}39.09%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k65{animation:k65 22.0s linear infinite}@keyframes k65{0%,39.40%{fill-opacity:0}39.41%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k66{animation:k66 22.0s linear infinite}@keyframes k66{0%,39.72%{fill-opacity:0}39.73%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k67{animation:k67 22.0s linear infinite}@keyframes k67{0%,40.04%{fill-opacity:0}40.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k68{animation:k68 22.0s linear infinite}@keyframes k68{0%,40.35%{fill-opacity:0}40.36%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k69{animation:k69 22.0s linear infinite}@keyframes k69{0%,40.67%{fill-opacity:0}40.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k70{animation:k70 22.0s linear infinite}@keyframes k70{0%,40.99%{fill-opacity:0}41.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k71{animation:k71 22.0s linear infinite}@keyframes k71{0%,41.31%{fill-opacity:0}41.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k72{animation:k72 22.0s linear infinite}@keyframes k72{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k73{animation:k73 22.0s linear infinite}@keyframes k73{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k74{animation:k74 22.0s linear infinite}@keyframes k74{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k75{animation:k75 22.0s linear infinite}@keyframes k75{0%,44.04%{fill-opacity:0}44.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k76{animation:k76 22.0s linear infinite}@keyframes k76{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k77{animation:k77 22.0s linear infinite}@keyframes k77{0%,44.31%{fill-opacity:0}44.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k78{animation:k78 22.0s linear infinite}@keyframes k78{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k79{animation:k79 22.0s linear infinite}@keyframes k79{0%,44.58%{fill-opacity:0}44.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k80{animation:k80 22.0s linear infinite}@keyframes k80{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k81{animation:k81 22.0s linear infinite}@keyframes k81{0%,44.85%{fill-opacity:0}44.86%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k82{animation:k82 22.0s linear infinite}@keyframes k82{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k83{animation:k83 22.0s linear infinite}@keyframes k83{0%,45.13%{fill-opacity:0}45.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k84{animation:k84 22.0s linear infinite}@keyframes k84{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k85{animation:k85 22.0s linear infinite}@keyframes k85{0%,45.40%{fill-opacity:0}45.41%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k86{animation:k86 22.0s linear infinite}@keyframes k86{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k87{animation:k87 22.0s linear infinite}@keyframes k87{0%,45.67%{fill-opacity:0}45.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k88{animation:k88 22.0s linear infinite}@keyframes k88{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k89{animation:k89 22.0s linear infinite}@keyframes k89{0%,45.94%{fill-opacity:0}45.95%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k90{animation:k90 22.0s linear infinite}@keyframes k90{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k91{animation:k91 22.0s linear infinite}@keyframes k91{0%,46.22%{fill-opacity:0}46.23%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k92{animation:k92 22.0s linear infinite}@keyframes k92{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k93{animation:k93 22.0s linear infinite}@keyframes k93{0%,46.49%{fill-opacity:0}46.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k94{animation:k94 22.0s linear infinite}@keyframes k94{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k95{animation:k95 22.0s linear infinite}@keyframes k95{0%,46.76%{fill-opacity:0}46.77%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k96{animation:k96 22.0s linear infinite}@keyframes k96{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k97{animation:k97 22.0s linear infinite}@keyframes k97{0%,47.04%{fill-opacity:0}47.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k98{animation:k98 22.0s linear infinite}@keyframes k98{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k99{animation:k99 22.0s linear infinite}@keyframes k99{0%,47.31%{fill-opacity:0}47.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k100{animation:k100 22.0s linear infinite}@keyframes k100{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k101{animation:k101 22.0s linear infinite}@keyframes k101{0%,47.58%{fill-opacity:0}47.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k102{animation:k102 22.0s linear infinite}@keyframes k102{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k103{animation:k103 22.0s linear infinite}@keyframes k103{0%,47.85%{fill-opacity:0}47.86%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k104{animation:k104 22.0s linear infinite}@keyframes k104{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k105{animation:k105 22.0s linear infinite}@keyframes k105{0%,48.13%{fill-opacity:0}48.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k106{animation:k106 22.0s linear infinite}@keyframes k106{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k107{animation:k107 22.0s linear infinite}@keyframes k107{0%,48.40%{fill-opacity:0}48.41%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k108{animation:k108 22.0s linear infinite}@keyframes k108{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k109{animation:k109 22.0s linear infinite}@keyframes k109{0%,48.67%{fill-opacity:0}48.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k110{animation:k110 22.0s linear infinite}@keyframes k110{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k111{animation:k111 22.0s linear infinite}@keyframes k111{0%,48.94%{fill-opacity:0}48.95%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k112{animation:k112 22.0s linear infinite}@keyframes k112{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k113{animation:k113 22.0s linear infinite}@keyframes k113{0%,49.22%{fill-opacity:0}49.23%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k114{animation:k114 22.0s linear infinite}@keyframes k114{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k115{animation:k115 22.0s linear infinite}@keyframes k115{0%,49.49%{fill-opacity:0}49.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k116{animation:k116 22.0s linear infinite}@keyframes k116{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k117{animation:k117 22.0s linear infinite}@keyframes k117{0%,49.76%{fill-opacity:0}49.77%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k118{animation:k118 22.0s linear infinite}@keyframes k118{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k119{animation:k119 22.0s linear infinite}@keyframes k119{0%,50.04%{fill-opacity:0}50.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k120{animation:k120 22.0s linear infinite}@keyframes k120{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k121{animation:k121 22.0s linear infinite}@keyframes k121{0%,50.31%{fill-opacity:0}50.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k122{animation:k122 22.0s linear infinite}@keyframes k122{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k123{animation:k123 22.0s linear infinite}@keyframes k123{0%,50.58%{fill-opacity:0}50.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k124{animation:k124 22.0s linear infinite}@keyframes k124{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k125{animation:k125 22.0s linear infinite}@keyframes k125{0%,50.85%{fill-opacity:0}50.86%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k126{animation:k126 22.0s linear infinite}@keyframes k126{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k127{animation:k127 22.0s linear infinite}@keyframes k127{0%,51.13%{fill-opacity:0}51.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k128{animation:k128 22.0s linear infinite}@keyframes k128{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k129{animation:k129 22.0s linear infinite}@keyframes k129{0%,51.40%{fill-opacity:0}51.41%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k130{animation:k130 22.0s linear infinite}@keyframes k130{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k131{animation:k131 22.0s linear infinite}@keyframes k131{0%,51.67%{fill-opacity:0}51.68%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k132{animation:k132 22.0s linear infinite}@keyframes k132{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k133{animation:k133 22.0s linear infinite}@keyframes k133{0%,51.94%{fill-opacity:0}51.95%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k134{animation:k134 22.0s linear infinite}@keyframes k134{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k135{animation:k135 22.0s linear infinite}@keyframes k135{0%,52.22%{fill-opacity:0}52.23%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k136{animation:k136 22.0s linear infinite}@keyframes k136{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k137{animation:k137 22.0s linear infinite}@keyframes k137{0%,52.49%{fill-opacity:0}52.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k138{animation:k138 22.0s linear infinite}@keyframes k138{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k139{animation:k139 22.0s linear infinite}@keyframes k139{0%,52.76%{fill-opacity:0}52.77%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k140{animation:k140 22.0s linear infinite}@keyframes k140{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k141{animation:k141 22.0s linear infinite}@keyframes k141{0%,53.04%{fill-opacity:0}53.05%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k142{animation:k142 22.0s linear infinite}@keyframes k142{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k143{animation:k143 22.0s linear infinite}@keyframes k143{0%,53.31%{fill-opacity:0}53.32%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k144{animation:k144 22.0s linear infinite}@keyframes k144{0%,43.58%{fill-opacity:0}43.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k145{animation:k145 22.0s linear infinite}@keyframes k145{0%,53.58%{fill-opacity:0}53.59%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k146{animation:k146 22.0s linear infinite}@keyframes k146{0%,53.85%{fill-opacity:0}53.86%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k147{animation:k147 22.0s linear infinite}@keyframes k147{0%,56.13%{fill-opacity:0}56.14%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k148{animation:k148 22.0s linear infinite}@keyframes k148{0%,59.76%{fill-opacity:0}59.77%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important;fill-opacity:1!important;opacity:1!important}}
+</style>
+<rect x=".5" y=".5" width="1218" height="633" rx="12" fill="#10243F"/>
+<text x="26" y="32"><tspan class="d">+--</tspan> <tspan class="d tw1">·</tspan><tspan class="m">FIG.</tspan> <tspan class="m">01</tspan> <tspan class="d">BUNNY,</tspan> <tspan class="d">THINKING</tspan>  <tspan class="d">//</tspan>  <tspan class="d">CYANOTYPE</tspan>                                                                                            <tspan class="d">--+</tspan></text>
+<text x="26" y="50"><tspan class="d">|</tspan>  <tspan class="d tw0">*</tspan>            <tspan class="d tw2">.</tspan> <tspan class="d tw1">*</tspan>   <tspan class="d tw2">*</tspan>                                                                                                                  <tspan class="d">|</tspan></text>
+<text x="26" y="68">                         <tspan class="m tw3">+</tspan>                <tspan class="d">.-~~~~-.</tspan>      <tspan class="d">.-~~~~~-.</tspan>         <tspan class="m">.------------------------------------------------------------.</tspan></text>
+<text x="26" y="86">                                     <tspan class="d">.-~~&#x27;</tspan>        <tspan class="d">&#x27;-~~-&#x27;</tspan>         <tspan class="d">&#x27;~~-.</tspan>    <tspan class="m">|</tspan> <tspan class="p">o</tspan> <tspan class="m">o</tspan> <tspan class="m">o</tspan>              <tspan class="m">bunny@bunnybethinking:</tspan> <tspan class="m">~</tspan>                <tspan class="m">|</tspan></text>
+<text x="26" y="104">               <tspan class="d tw1">+</tspan>            <tspan class="d tw1">*</tspan> <tspan class="m tw3">+</tspan>     <tspan class="d">(</tspan>    <tspan class="p node0">o</tspan><tspan class="d">---.</tspan>                <tspan class="d">.---</tspan><tspan class="p node3">o</tspan>    <tspan class="d">)</tspan>  <tspan class="m">|------------------------------------------------------------|</tspan> <tspan class="d tw2">.</tspan></text>
+<text x="26" y="122">                                   <tspan class="d">(</tspan>          <tspan class="d">\--(</tspan> <tspan class="p node1">o</tspan> <tspan class="d">)--.</tspan>    <tspan class="d">/</tspan>          <tspan class="d">)</tspan> <tspan class="m">|</tspan>                                                            <tspan class="m">|</tspan></text>
+<text x="26" y="140"><tspan class="d tw1">+</tspan>          <tspan class="p">.-.</tspan>            <tspan class="p">.-.</tspan>     <tspan class="d">(</tspan>      <tspan class="p node0">o</tspan><tspan class="d">-----:</tspan>         <tspan class="d">&gt;--</tspan><tspan class="p node2">o</tspan><tspan class="d">------</tspan><tspan class="p node3">o</tspan>     <tspan class="d">)</tspan><tspan class="m">|</tspan> <tspan class="m k1">$</tspan> <tspan class="p k2">w</tspan><tspan class="p k3">h</tspan><tspan class="p k4">o</tspan><tspan class="p k5">a</tspan><tspan class="p k6">m</tspan><tspan class="p k7">i</tspan>                                                   <tspan class="m">|</tspan></text>
+<text x="26" y="158">          <tspan class="p">/</tspan>   <tspan class="p">\</tspan>          <tspan class="p">/</tspan>   <tspan class="p">\</tspan>     <tspan class="d">(</tspan>          <tspan class="d">/--(</tspan> <tspan class="p node1">o</tspan> <tspan class="d">)--&#x27;</tspan>    <tspan class="d">\</tspan>          <tspan class="d">)</tspan> <tspan class="m">|</tspan>   <tspan class="p k8">Pavan</tspan> <tspan class="p k8">Kumar</tspan> <tspan class="p k8">Balijepalli.</tspan> <tspan class="p k8">friends</tspan> <tspan class="p k8">call</tspan> <tspan class="p k8">me</tspan> <tspan class="m k8">Bunny</tspan><tspan class="p k8">.</tspan>          <tspan class="m">|</tspan></text>
+<text x="26" y="176">   <tspan class="d tw2">.</tspan>     <tspan class="p">/</tspan>  <tspan class="p">_</tspan>  <tspan class="p">\</tspan>        <tspan class="p">/</tspan>  <tspan class="m">_</tspan>  <tspan class="p">\</tspan>     <tspan class="d">(</tspan>    <tspan class="p node0">o</tspan><tspan class="d">---&#x27;</tspan>                <tspan class="d">&#x27;---</tspan><tspan class="p node3">o</tspan>    <tspan class="d">)</tspan>  <tspan class="m">|</tspan>   <tspan class="p k9">Lead</tspan> <tspan class="p k9">Data</tspan> <tspan class="p k9">Scientist</tspan> <tspan class="p k9">/</tspan> <tspan class="p k9">AI</tspan> <tspan class="p k9">Lead</tspan> <tspan class="m k9">@</tspan> <tspan class="m k9">Cigna</tspan>                    <tspan class="m">|</tspan></text>
+<text x="26" y="194">         <tspan class="p">|</tspan> <tspan class="m">/</tspan> <tspan class="m">\</tspan> <tspan class="p">|</tspan>        <tspan class="p">|</tspan> <tspan class="p">/</tspan> <tspan class="p">\</tspan> <tspan class="p">|</tspan>      <tspan class="d">&#x27;-._</tspan>        <tspan class="d">_.-~~-._</tspan>        <tspan class="d">_.-&#x27;</tspan>     <tspan class="m">|</tspan>   <tspan class="p k10">7+</tspan> <tspan class="p k10">yrs</tspan> <tspan class="p k10">in</tspan> <tspan class="p k10">AI/ML,</tspan> <tspan class="p k10">mostly</tspan> <tspan class="p k10">the</tspan> <tspan class="p k10">unglamorous</tspan> <tspan class="p k10">middle</tspan>           <tspan class="m">|</tspan></text>
+<text x="26" y="212"><tspan class="m tw3">.</tspan>        <tspan class="p">|</tspan> <tspan class="m">|</tspan> <tspan class="m">|</tspan> <tspan class="p">|</tspan>        <tspan class="p">|</tspan> <tspan class="p">|</tspan> <tspan class="p">|</tspan> <tspan class="p">|</tspan>          <tspan class="d">&#x27;~~~~~~&#x27;</tspan>        <tspan class="d">&#x27;~~~~~~&#x27;</tspan>         <tspan class="m">|</tspan>                                                            <tspan class="m">|</tspan></text>
+<text x="26" y="230">         <tspan class="p">|</tspan> <tspan class="m">|</tspan> <tspan class="m">|</tspan> <tspan class="p">|</tspan>        <tspan class="p">|</tspan> <tspan class="p">|</tspan> <tspan class="p">|</tspan> <tspan class="p">|</tspan>                                           <tspan class="m">|</tspan> <tspan class="m k11">$</tspan> <tspan class="p k12">c</tspan><tspan class="p k13">a</tspan><tspan class="p k14">t</tspan> <tspan class="p k16">n</tspan><tspan class="p k17">o</tspan><tspan class="p k18">w</tspan><tspan class="p k19">.</tspan><tspan class="p k20">t</tspan><tspan class="p k21">x</tspan><tspan class="p k22">t</tspan>                                              <tspan class="m">|</tspan></text>
+<text x="26" y="248">         <tspan class="p">|</tspan> <tspan class="m">|</tspan> <tspan class="m">|</tspan> <tspan class="p">|</tspan>        <tspan class="p">|</tspan> <tspan class="p">|</tspan> <tspan class="p">|</tspan> <tspan class="p">|</tspan>       <tspan class="m">is</tspan> <tspan class="m">the</tspan> <tspan class="m">model</tspan> <tspan class="m">actually</tspan> <tspan class="m">thinking?</tspan>     <tspan class="m">|</tspan>   <tspan class="m k23">shipping</tspan> <tspan class="d k23">....</tspan> <tspan class="p k23">agentic</tspan> <tspan class="p k23">systems</tspan> <tspan class="p k23">that</tspan> <tspan class="p k23">hold</tspan> <tspan class="p k23">up</tspan> <tspan class="p k23">in</tspan> <tspan class="p k23">prod</tspan>       <tspan class="m">|</tspan></text>
+<text x="26" y="266">         <tspan class="p">|</tspan> <tspan class="m">\_/</tspan> <tspan class="p">|</tspan>        <tspan class="p">|</tspan> <tspan class="m">\_</tspan><tspan class="p">/</tspan> <tspan class="p">|</tspan>                                           <tspan class="m">|</tspan>   <tspan class="m k24">studying</tspan> <tspan class="d k24">....</tspan> <tspan class="p k24">M.Tech</tspan> <tspan class="p k24">AIML</tspan> <tspan class="p k24">@</tspan> <tspan class="p k24">BITS</tspan> <tspan class="p k24">Pilani</tspan>                  <tspan class="m">|</tspan></text>
+<text x="26" y="284">   <tspan class="d tw1">.</tspan>      <tspan class="p">\</tspan>    <tspan class="p">&#x27;.______.&#x27;</tspan>    <tspan class="p">/</tspan>       <tspan class="m bub1">o</tspan><tspan class="d tw1">.</tspan>          <tspan class="d tw1">*</tspan>                        <tspan class="m">|</tspan>   <tspan class="m k25">teaching</tspan> <tspan class="d k25">....</tspan> <tspan class="p k25">guest</tspan> <tspan class="p k25">lectures</tspan> <tspan class="p k25">@</tspan> <tspan class="p k25">BITS</tspan> <tspan class="p k25">Pilani</tspan> <tspan class="p k25">WILP</tspan>          <tspan class="m">|</tspan></text>
+<text x="26" y="302">          <tspan class="p">.&#x27;</tspan>                <tspan class="p">&#x27;.</tspan>                <tspan class="d tw1">·</tspan>                           <tspan class="m">|</tspan>   <tspan class="m k26">digging</tspan> <tspan class="d k26">.....</tspan> <tspan class="p k26">how</tspan> <tspan class="p k26">LLMs</tspan> <tspan class="p k26">are</tspan> <tspan class="p k26">actually</tspan> <tspan class="p k26">pretrained</tspan>           <tspan class="m">|</tspan></text>
+<text x="26" y="320"><tspan class="d tw0">.</tspan>        <tspan class="p">/</tspan>                    <tspan class="p">\</tspan>    <tspan class="m bub0">o</tspan>               <tspan class="m tw3">*</tspan>        <tspan class="d tw1">·</tspan>        <tspan class="d tw1">.</tspan>  <tspan class="d tw1">.</tspan> <tspan class="m">|</tspan>   <tspan class="m k27">building</tspan> <tspan class="d k27">....</tspan> <tspan class="p k27">bunnybethinking,</tspan> <tspan class="p k27">a</tspan> <tspan class="p k27">village</tspan>                 <tspan class="m">|</tspan></text>
+<text x="26" y="338">        <tspan class="p">|</tspan>                      <tspan class="p">|</tspan>                                          <tspan class="m">|</tspan>                                                            <tspan class="m">|</tspan></text>
+<text x="26" y="356">        <tspan class="p">|</tspan>                      <tspan class="p">|</tspan>                              <tspan class="d tw2">·</tspan>           <tspan class="m">|</tspan> <tspan class="m k28">$</tspan> <tspan class="p k29">l</tspan><tspan class="p k30">s</tspan> <tspan class="p k32">~</tspan><tspan class="p k33">/</tspan><tspan class="p k34">h</tspan><tspan class="p k35">u</tspan><tspan class="p k36">g</tspan><tspan class="p k37">g</tspan><tspan class="p k38">i</tspan><tspan class="p k39">n</tspan><tspan class="p k40">g</tspan><tspan class="p k41">f</tspan><tspan class="p k42">a</tspan><tspan class="p k43">c</tspan><tspan class="p k44">e</tspan>                                         <tspan class="m">|</tspan></text>
+<text x="26" y="374">        <tspan class="p">|</tspan>                      <tspan class="p">|</tspan>              <tspan class="d tw1">.</tspan>                           <tspan class="m">|</tspan>   <tspan class="p k45">TeLLM/</tspan>          <tspan class="d k45">a</tspan> <tspan class="d k45">Telugu</tspan> <tspan class="d k45">LLM</tspan>                             <tspan class="m">|</tspan></text>
+<text x="26" y="392">        <tspan class="p">|</tspan>  <tspan class="m">-=</tspan>      <tspan class="m">\/</tspan>      <tspan class="m">=-</tspan>  <tspan class="p">|</tspan>      <tspan class="d tw0">.</tspan>                       <tspan class="d tw2">.</tspan>   <tspan class="m tw3">+</tspan>       <tspan class="m">|</tspan>   <tspan class="p k46">phi2-sqlcoder/</tspan>  <tspan class="d k46">plain</tspan> <tspan class="d k46">English</tspan> <tspan class="d k46">-&gt;</tspan> <tspan class="d k46">SQL</tspan>                     <tspan class="m">|</tspan></text>
+<text x="26" y="410">        <tspan class="p">|</tspan> <tspan class="m">-=</tspan>      <tspan class="m">(__)</tspan>      <tspan class="m">=-</tspan> <tspan class="p">|</tspan>                                          <tspan class="m">|</tspan>                                                            <tspan class="m">|</tspan></text>
+<text x="26" y="428">         <tspan class="p">\</tspan>                    <tspan class="p">/</tspan>        <tspan class="d tw1">+</tspan>                                  <tspan class="m">|</tspan> <tspan class="m k47">$</tspan> <tspan class="p k48">.</tspan><tspan class="p k49">/</tspan><tspan class="p k50">t</tspan><tspan class="p k51">h</tspan><tspan class="p k52">i</tspan><tspan class="p k53">n</tspan><tspan class="p k54">k</tspan> <tspan class="p k56">-</tspan><tspan class="p k57">-</tspan><tspan class="p k58">h</tspan><tspan class="p k59">a</tspan><tspan class="p k60">r</tspan><tspan class="p k61">d</tspan> <tspan class="p k63">-</tspan><tspan class="p k64">-</tspan><tspan class="p k65">n</tspan><tspan class="p k66">o</tspan><tspan class="p k67">-</tspan><tspan class="p k68">h</tspan><tspan class="p k69">y</tspan><tspan class="p k70">p</tspan><tspan class="p k71">e</tspan>                                 <tspan class="m">|</tspan></text>
+<text x="26" y="446">      <tspan class="p">.---&#x27;-.______________.-&#x27;---.</tspan>   <tspan class="d tw0">·</tspan>                     <tspan class="m tw3">.</tspan>              <tspan class="m">|</tspan>   <tspan class="m k72">[</tspan><tspan class="p k75">#</tspan><tspan class="p k77">#</tspan><tspan class="p k79">#</tspan><tspan class="p k81">#</tspan><tspan class="p k83">#</tspan><tspan class="p k85">#</tspan><tspan class="p k87">#</tspan><tspan class="p k89">#</tspan><tspan class="p k91">#</tspan><tspan class="p k93">#</tspan><tspan class="p k95">#</tspan><tspan class="p k97">#</tspan><tspan class="p k99">#</tspan><tspan class="p k101">#</tspan><tspan class="p k103">#</tspan><tspan class="p k105">#</tspan><tspan class="p k107">#</tspan><tspan class="p k109">#</tspan><tspan class="p k111">#</tspan><tspan class="p k113">#</tspan><tspan class="p k115">#</tspan><tspan class="p k117">#</tspan><tspan class="p k119">#</tspan><tspan class="p k121">#</tspan><tspan class="p k123">#</tspan><tspan class="p k125">#</tspan><tspan class="p k127">#</tspan><tspan class="p k129">#</tspan><tspan class="p k131">#</tspan><tspan class="p k133">#</tspan><tspan class="p k135">#</tspan><tspan class="p k137">#</tspan><tspan class="p k139">#</tspan><tspan class="p k141">#</tspan><tspan class="p k143">#</tspan><tspan class="p k145">#</tspan><tspan class="m k73">]</tspan>                   <tspan class="m">|</tspan></text>
+<text x="26" y="464">      <tspan class="p">|</tspan>  <tspan class="m">(&quot;)(&quot;)</tspan>          <tspan class="m">(&quot;)(&quot;)</tspan>  <tspan class="p">|</tspan>    <tspan class="d tw2">·</tspan>                                   <tspan class="m">|</tspan>   <tspan class="m k146">&gt;</tspan> <tspan class="p k146">what</tspan> <tspan class="p k146">is</tspan> <tspan class="p k146">the</tspan> <tspan class="p k146">model</tspan> <tspan class="m k146">*actually*</tspan> <tspan class="p k146">doing?</tspan>                    <tspan class="m">|</tspan></text>
+<text x="26" y="482">      <tspan class="p">|</tspan>                          <tspan class="p">|</tspan>                                        <tspan class="m">|</tspan>   <tspan class="m k147">&gt;</tspan> <tspan class="p k147">be</tspan> <tspan class="p k147">comfortable</tspan> <tspan class="p k147">being</tspan> <tspan class="p k147">wrong</tspan> <tspan class="p k147">in</tspan> <tspan class="p k147">public.</tspan>                  <tspan class="m">|</tspan></text>
+<text x="26" y="500">      <tspan class="p">|</tspan>          <tspan class="m">.----.</tspan>          <tspan class="p">|</tspan>                                  <tspan class="d tw1">+</tspan>     <tspan class="m">|</tspan>                                                            <tspan class="m">|</tspan></text>
+<text x="26" y="518">      <tspan class="p">|</tspan>         <tspan class="m">(</tspan> <tspan class="m">o--o</tspan> <tspan class="m">)</tspan>         <tspan class="p">|</tspan>       <tspan class="d tw0">.</tspan>                        <tspan class="d tw1">.</tspan>       <tspan class="m">|</tspan> <tspan class="m k148">$</tspan>                                                          <tspan class="m">|</tspan></text>
+<text x="26" y="536">      <tspan class="p">|</tspan>          <tspan class="m">&#x27;----&#x27;</tspan>          <tspan class="p">|</tspan>            <tspan class="d tw0">+</tspan>                     <tspan class="d tw1">.</tspan>     <tspan class="m">|</tspan>                                                            <tspan class="m">|</tspan></text>
+<text x="26" y="554">      <tspan class="p">|__________________________|</tspan>                      <tspan class="d tw0">·</tspan>                 <tspan class="m">|</tspan>                                                            <tspan class="m">|</tspan></text>
+<text x="26" y="572">     <tspan class="p">/____________________________\</tspan>                                       <tspan class="m">&#x27;------------------------------------------------------------&#x27;</tspan></text>
+<text x="26" y="590"><tspan class="d">|</tspan>    <tspan class="d">|&lt;-------</tspan> <tspan class="m">7+</tspan> <tspan class="m">yrs</tspan> <tspan class="m">in</tspan> <tspan class="m">AI</tspan> <tspan class="m">/</tspan> <tspan class="m">ML</tspan> <tspan class="d">-------&gt;|</tspan>                                                                                               <tspan class="d">|</tspan></text>
+<text x="26" y="608"><tspan class="d">+--</tspan>                                                                                                 <tspan class="m">bunnybethinking</tspan> <tspan class="d">//</tspan> <tspan class="d">sheet</tspan> <tspan class="d">1</tspan> <tspan class="d">of</tspan> <tspan class="d">3</tspan>    <tspan class="d">--+</tspan></text>
+<g class="open"><text x="26" y="338">            <tspan class="p">.--.</tspan>      <tspan class="p">.--.</tspan></text>
+<text x="26" y="356">           <tspan class="p">(</tspan> <tspan class="m">@</tspan>  <tspan class="p">)</tspan>    <tspan class="p">(</tspan> <tspan class="p">@</tspan>  <tspan class="p">)</tspan></text>
+<text x="26" y="374">            <tspan class="p">&#x27;--&#x27;</tspan>      <tspan class="p">&#x27;--&#x27;</tspan></text></g>
+<g class="shut"><text x="26" y="356">            <tspan class="p">----</tspan>      <tspan class="p">----</tspan></text></g>
+<g class="curwrap"><text x="26" y="518">                                                                              <tspan class="m cur">█</tspan></text></g>
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1219 652" width="1219" height="652" role="img" aria-labelledby="t d" xml:space="preserve">
+<title id="t">How LLMs are actually pretrained</title>
+<desc id="d">Animated ASCII blueprint: a loss curve drawing itself, a decoder-only transformer block with a forward pass lighting up, and a causal attention map.</desc>
+<style>
+text{font-family:ui-monospace, 'JetBrains Mono', 'Cascadia Mono', SFMono-Regular, Menlo, Monaco, 'DejaVu Sans Mono', 'Liberation Mono', 'Courier New', monospace;font-size:14px;white-space:pre;font-variant-ligatures:none;font-feature-settings:'liga' 0,'calt' 0}
+
+.i{fill:#10243F} .c{fill:#1F4E8C} .u{fill:#46566E} .b{fill:#C3CEDA}
+.fw{animation:fw 8.40s ease-out infinite}
+@keyframes fw{0%,14%{fill:#1F4E8C;fill-opacity:1}4%{fill:#7E9CC4}28%,100%{}}
+.fw0{animation-delay:0.00s}
+.fw1{animation-delay:0.32s}
+.fw2{animation-delay:0.64s}
+.fw3{animation-delay:0.96s}
+.fw4{animation-delay:1.28s}
+.fw5{animation-delay:1.60s}
+.fw6{animation-delay:1.92s}
+.fw7{animation-delay:2.24s}
+.fw8{animation-delay:2.56s}
+.fw9{animation-delay:2.88s}
+.fw10{animation-delay:3.20s}
+.fw11{animation-delay:3.52s}
+.fw12{animation-delay:3.84s}
+.fw13{animation-delay:4.16s}
+.fw14{animation-delay:4.48s}
+.fw15{animation-delay:4.80s}
+.fw16{animation-delay:5.12s}
+.fw17{animation-delay:5.44s}
+.fw18{animation-delay:5.76s}
+.fw19{animation-delay:6.08s}
+.at0,.at1,.at2,.at3,.at4{animation:at 3.2s ease-in-out infinite}
+.at1{animation-delay:.6s} .at2{animation-delay:1.3s} .at3{animation-delay:1.9s} .at4{animation-delay:2.6s}
+@keyframes at{0%,100%{fill-opacity:1}50%{fill-opacity:.35}}
+.k1{animation:k1 12.0s linear infinite}@keyframes k1{0%,2.49%{fill-opacity:0}2.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k2{animation:k2 12.0s linear infinite}@keyframes k2{0%,3.41%{fill-opacity:0}3.42%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k3{animation:k3 12.0s linear infinite}@keyframes k3{0%,4.32%{fill-opacity:0}4.33%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k4{animation:k4 12.0s linear infinite}@keyframes k4{0%,5.24%{fill-opacity:0}5.25%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k5{animation:k5 12.0s linear infinite}@keyframes k5{0%,6.16%{fill-opacity:0}6.17%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k6{animation:k6 12.0s linear infinite}@keyframes k6{0%,7.07%{fill-opacity:0}7.08%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k7{animation:k7 12.0s linear infinite}@keyframes k7{0%,7.99%{fill-opacity:0}8.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k8{animation:k8 12.0s linear infinite}@keyframes k8{0%,8.91%{fill-opacity:0}8.92%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k9{animation:k9 12.0s linear infinite}@keyframes k9{0%,9.82%{fill-opacity:0}9.83%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k10{animation:k10 12.0s linear infinite}@keyframes k10{0%,10.74%{fill-opacity:0}10.75%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k11{animation:k11 12.0s linear infinite}@keyframes k11{0%,11.66%{fill-opacity:0}11.67%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k12{animation:k12 12.0s linear infinite}@keyframes k12{0%,12.57%{fill-opacity:0}12.58%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k13{animation:k13 12.0s linear infinite}@keyframes k13{0%,13.49%{fill-opacity:0}13.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k14{animation:k14 12.0s linear infinite}@keyframes k14{0%,14.41%{fill-opacity:0}14.42%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k15{animation:k15 12.0s linear infinite}@keyframes k15{0%,15.32%{fill-opacity:0}15.33%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k16{animation:k16 12.0s linear infinite}@keyframes k16{0%,16.24%{fill-opacity:0}16.25%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k17{animation:k17 12.0s linear infinite}@keyframes k17{0%,17.16%{fill-opacity:0}17.17%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k18{animation:k18 12.0s linear infinite}@keyframes k18{0%,18.07%{fill-opacity:0}18.08%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k19{animation:k19 12.0s linear infinite}@keyframes k19{0%,18.99%{fill-opacity:0}19.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k20{animation:k20 12.0s linear infinite}@keyframes k20{0%,19.91%{fill-opacity:0}19.92%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k21{animation:k21 12.0s linear infinite}@keyframes k21{0%,20.82%{fill-opacity:0}20.83%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k22{animation:k22 12.0s linear infinite}@keyframes k22{0%,21.74%{fill-opacity:0}21.75%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k23{animation:k23 12.0s linear infinite}@keyframes k23{0%,22.66%{fill-opacity:0}22.67%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k24{animation:k24 12.0s linear infinite}@keyframes k24{0%,23.57%{fill-opacity:0}23.58%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k25{animation:k25 12.0s linear infinite}@keyframes k25{0%,24.49%{fill-opacity:0}24.50%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k26{animation:k26 12.0s linear infinite}@keyframes k26{0%,25.41%{fill-opacity:0}25.42%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k27{animation:k27 12.0s linear infinite}@keyframes k27{0%,26.32%{fill-opacity:0}26.33%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k28{animation:k28 12.0s linear infinite}@keyframes k28{0%,27.24%{fill-opacity:0}27.25%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k29{animation:k29 12.0s linear infinite}@keyframes k29{0%,28.16%{fill-opacity:0}28.17%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k30{animation:k30 12.0s linear infinite}@keyframes k30{0%,29.07%{fill-opacity:0}29.08%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k31{animation:k31 12.0s linear infinite}@keyframes k31{0%,29.99%{fill-opacity:0}30.00%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k32{animation:k32 12.0s linear infinite}@keyframes k32{0%,30.91%{fill-opacity:0}30.92%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k33{animation:k33 12.0s linear infinite}@keyframes k33{0%,31.82%{fill-opacity:0}31.83%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k34{animation:k34 12.0s linear infinite}@keyframes k34{0%,32.74%{fill-opacity:0}32.75%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+.k35{animation:k35 12.0s linear infinite}@keyframes k35{0%,41.66%{fill-opacity:0}41.67%,95.49%{fill-opacity:1}95.50%,100%{fill-opacity:0}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important;fill-opacity:1!important;opacity:1!important}}
+</style>
+<rect x=".5" y=".5" width="1218" height="651" rx="12" fill="#E8EDF2" stroke="#C3CEDA" stroke-width="1"/>
+<defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#C3CEDA" stroke-width="1"/></pattern></defs><rect x="1" y="1" width="1217" height="650" rx="12" fill="url(#g)" opacity=".55"/>
+<text x="26" y="32"><tspan class="b">+--</tspan>  <tspan class="c">FIG.</tspan> <tspan class="c">02</tspan> <tspan class="u">HOW</tspan> <tspan class="u">LLMs</tspan> <tspan class="u">ARE</tspan> <tspan class="u">ACTUALLY</tspan> <tspan class="u">PRETRAINED</tspan>  <tspan class="u">//</tspan>  <tspan class="u">what</tspan> <tspan class="u">I&#x27;m</tspan> <tspan class="u">digging</tspan> <tspan class="u">into</tspan>                                                               <tspan class="b">--+</tspan></text>
+<text x="26" y="68">                                                 <tspan class="i fw fw19">next-token</tspan> <tspan class="i fw fw19">probs</tspan></text>
+<text x="26" y="86">                                                          <tspan class="u fw fw18">^</tspan></text>
+<text x="26" y="104">   <tspan class="c">loss</tspan>                                       <tspan class="i">.----------------------.</tspan>                          <tspan class="c">causal</tspan> <tspan class="c">self-attention</tspan> <tspan class="c">(one</tspan> <tspan class="c">head)</tspan></text>
+<text x="26" y="122">    <tspan class="i">^</tspan>                                         <tspan class="i">|</tspan>      <tspan class="i fw fw17">softmax</tspan>         <tspan class="i">|</tspan></text>
+<text x="26" y="140">    <tspan class="i">|</tspan>                                         <tspan class="i">&#x27;-----------</tspan><tspan class="u fw fw16">^</tspan><tspan class="i">----------&#x27;</tspan>                                <tspan class="u">the</tspan>  <tspan class="c at4">@</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="158">    <tspan class="i">|</tspan><tspan class="c k1">*</tspan>                                        <tspan class="i">.----------------------.</tspan></text>
+<text x="26" y="176">    <tspan class="i">|</tspan> <tspan class="c k2">:</tspan>                                       <tspan class="i">|</tspan>       <tspan class="i fw fw15">linear</tspan>         <tspan class="i">|</tspan>                              <tspan class="u">model</tspan>  <tspan class="c at3">.</tspan>  <tspan class="c at4">@</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="194">    <tspan class="i">|</tspan> <tspan class="c k3">*</tspan>              <tspan class="u">next-token</tspan>               <tspan class="i">&#x27;-----------</tspan><tspan class="u fw fw14">^</tspan><tspan class="i">----------&#x27;</tspan></text>
+<text x="26" y="212">    <tspan class="i">|</tspan>  <tspan class="c k4">:</tspan>             <tspan class="u">cross-entropy</tspan>         <tspan class="c">.--------------</tspan><tspan class="u fw fw13">^</tspan><tspan class="c">-------------.</tspan>                              <tspan class="u">is</tspan>  <tspan class="c at2">.</tspan>  <tspan class="c at4">.</tspan>  <tspan class="c at1">@</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="230">    <tspan class="i">|</tspan>  <tspan class="c k5">*</tspan>             <tspan class="u">goes</tspan> <tspan class="u">down.</tspan>            <tspan class="c">|</tspan>  <tspan class="u">.----------------------.</tspan>  <tspan class="c">|</tspan></text>
+<text x="26" y="248">    <tspan class="i">|</tspan>   <tspan class="c k6">:</tspan>            <tspan class="c k35">slowly.</tspan>               <tspan class="c">|</tspan>  <tspan class="u">|</tspan>    <tspan class="i fw fw12">add</tspan>  <tspan class="i fw fw12">&amp;</tspan>  <tspan class="i fw fw12">norm</tspan>      <tspan class="u">|</tspan>  <tspan class="c">|</tspan>                        <tspan class="u">actually</tspan>  <tspan class="c at3">.</tspan>  <tspan class="c at1">+</tspan>  <tspan class="c at1">-</tspan>  <tspan class="c at1">#</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="266">    <tspan class="i">|</tspan>   <tspan class="c k7">*</tspan>                                  <tspan class="c">|</tspan>  <tspan class="u">&#x27;-----------</tspan><tspan class="u fw fw11">^</tspan><tspan class="u">----------&#x27;</tspan>  <tspan class="c">|</tspan></text>
+<text x="26" y="284">    <tspan class="i">|</tspan>    <tspan class="c k8">*</tspan>                                 <tspan class="c">|</tspan>  <tspan class="u">.----------------------.</tspan>  <tspan class="c">|</tspan>                            <tspan class="u">just</tspan>  <tspan class="c at4">=</tspan>  <tspan class="c at0">:</tspan>  <tspan class="c at2">-</tspan>  <tspan class="c at0">-</tspan>  <tspan class="c at2">-</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="302">    <tspan class="i">|</tspan>     <tspan class="c k9">:</tspan>                                <tspan class="c">|</tspan>  <tspan class="u">|</tspan>    <tspan class="i fw fw10">feed</tspan> <tspan class="i fw fw10">forward</tspan>      <tspan class="u">|</tspan>  <tspan class="c">|</tspan></text>
+<text x="26" y="320">    <tspan class="i">|</tspan>     <tspan class="c k10">*</tspan>                                <tspan class="c">|</tspan>  <tspan class="u">&#x27;-----------</tspan><tspan class="u fw fw9">^</tspan><tspan class="u">----------&#x27;</tspan>  <tspan class="c">|</tspan>                        <tspan class="u">guessing</tspan>  <tspan class="c at4">:</tspan>  <tspan class="c at3">-</tspan>  <tspan class="c at1">-</tspan>  <tspan class="c at2">-</tspan>  <tspan class="c at0">=</tspan>  <tspan class="c at0">-</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="338">    <tspan class="i">|</tspan>      <tspan class="c k11">*</tspan>                               <tspan class="c">|</tspan>  <tspan class="u">.----------------------.</tspan>  <tspan class="c">|</tspan> <tspan class="c">x</tspan> <tspan class="c">N</tspan></text>
+<text x="26" y="356">    <tspan class="i">|</tspan>       <tspan class="c k12">*</tspan><tspan class="c k13">*</tspan>                             <tspan class="c">|</tspan>  <tspan class="u">|</tspan>    <tspan class="i fw fw8">add</tspan>  <tspan class="i fw fw8">&amp;</tspan>  <tspan class="i fw fw8">norm</tspan>      <tspan class="u">|</tspan>  <tspan class="c">|</tspan>                             <tspan class="u">the</tspan>  <tspan class="c at3">.</tspan>  <tspan class="c at4">.</tspan>  <tspan class="c at2">+</tspan>  <tspan class="c at4">:</tspan>  <tspan class="c at4">-</tspan>  <tspan class="c at3">.</tspan>  <tspan class="c at4">+</tspan>  <tspan class="b">.</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="374">    <tspan class="i">|</tspan>         <tspan class="c k14">*</tspan>                            <tspan class="c">|</tspan>  <tspan class="u">&#x27;-----------</tspan><tspan class="u fw fw7">^</tspan><tspan class="u">----------&#x27;</tspan>  <tspan class="c">|</tspan></text>
+<text x="26" y="392">    <tspan class="i">|</tspan>          <tspan class="c k15">*</tspan><tspan class="c k16">*</tspan><tspan class="c k17">*</tspan><tspan class="c k18">*</tspan>                        <tspan class="c">|</tspan>  <tspan class="u">.----------------------.</tspan>  <tspan class="c">|</tspan>                            <tspan class="u">next</tspan>  <tspan class="c at2">.</tspan>  <tspan class="c at4">.</tspan>  <tspan class="c at4">=</tspan>  <tspan class="c at4">.</tspan>  <tspan class="c at0">.</tspan>  <tspan class="c at1">:</tspan>  <tspan class="c at4">-</tspan>  <tspan class="c at2">+</tspan>  <tspan class="b">.</tspan></text>
+<text x="26" y="410">    <tspan class="i">|</tspan>              <tspan class="c k19">*</tspan><tspan class="c k20">*</tspan><tspan class="c k21">*</tspan><tspan class="c k22">*</tspan><tspan class="c k23">*</tspan><tspan class="c k24">*</tspan>                  <tspan class="c">|</tspan>  <tspan class="u">|</tspan> <tspan class="i fw fw5">masked</tspan> <tspan class="i fw fw5">multi-head</tspan>    <tspan class="u">|</tspan>  <tspan class="c">|</tspan></text>
+<text x="26" y="428">    <tspan class="i">|</tspan>                    <tspan class="c k25">*</tspan><tspan class="c k26">*</tspan><tspan class="c k27">*</tspan><tspan class="c k28">*</tspan><tspan class="c k29">*</tspan><tspan class="c k30">*</tspan><tspan class="c k31">*</tspan><tspan class="c k32">*</tspan><tspan class="c k33">*</tspan><tspan class="c k34">*</tspan>        <tspan class="c">|</tspan>  <tspan class="u">|</tspan>     <tspan class="i fw fw6">attention</tspan>        <tspan class="u">|</tspan>  <tspan class="c">|</tspan>                            <tspan class="u">word</tspan>  <tspan class="c at3">.</tspan>  <tspan class="c at0">.</tspan>  <tspan class="c at0">-</tspan>  <tspan class="c at4">=</tspan>  <tspan class="c at4">.</tspan>  <tspan class="c at0">-</tspan>  <tspan class="c at3">.</tspan>  <tspan class="c at4">.</tspan>  <tspan class="c at2">-</tspan></text>
+<text x="26" y="446">    <tspan class="i">|</tspan>                                      <tspan class="c">|</tspan>  <tspan class="u">&#x27;-----------</tspan><tspan class="u fw fw4">^</tspan><tspan class="u">----------&#x27;</tspan>  <tspan class="c">|</tspan></text>
+<text x="26" y="464">    <tspan class="i">+------------------------------&gt;</tspan> <tspan class="i">steps</tspan> <tspan class="c">&#x27;--------------</tspan><tspan class="u fw fw3">^</tspan><tspan class="c">-------------&#x27;</tspan>                                  <tspan class="u">t</tspan>  <tspan class="u">m</tspan>  <tspan class="u">i</tspan>  <tspan class="u">a</tspan>  <tspan class="u">j</tspan>  <tspan class="u">g</tspan>  <tspan class="u">t</tspan>  <tspan class="u">n</tspan>  <tspan class="u">w</tspan></text>
+<text x="26" y="482">     <tspan class="u">0</tspan>        <tspan class="u">10k</tspan>      <tspan class="u">20k</tspan>      <tspan class="u">30k</tspan>           <tspan class="i">.----------------------.</tspan></text>
+<text x="26" y="500">                                              <tspan class="i">|</tspan> <tspan class="i fw fw2">token</tspan> <tspan class="i fw fw2">+</tspan> <tspan class="i fw fw2">pos</tspan> <tspan class="i fw fw2">embed</tspan>    <tspan class="i">|</tspan>                          <tspan class="u">each</tspan> <tspan class="u">token</tspan> <tspan class="u">only</tspan> <tspan class="u">looks</tspan> <tspan class="u">back.</tspan></text>
+<text x="26" y="518">                                              <tspan class="i">&#x27;----------------------&#x27;</tspan>                          <tspan class="u">no</tspan> <tspan class="u">peeking</tspan> <tspan class="u">at</tspan> <tspan class="u">the</tspan> <tspan class="u">future.</tspan></text>
+<text x="26" y="536">                                                          <tspan class="u fw fw1">^</tspan></text>
+<text x="26" y="554">                                        <tspan class="u fw fw0">&quot;the</tspan> <tspan class="u fw fw0">model</tspan> <tspan class="u fw fw0">is</tspan> <tspan class="u fw fw0">actually</tspan> <tspan class="u fw fw0">...&quot;</tspan></text>
+<text x="26" y="572">                                               <tspan class="u">predict</tspan> <tspan class="u">the</tspan> <tspan class="u">next</tspan> <tspan class="u">token.</tspan></text>
+<text x="26" y="590">                                               <tspan class="c">then</tspan> <tspan class="c">do</tspan> <tspan class="c">it</tspan> <tspan class="c">a</tspan> <tspan class="c">trillion</tspan> <tspan class="c">times.</tspan></text>
+<text x="26" y="626"><tspan class="b">+--</tspan>                                                                                                 <tspan class="c">bunnybethinking</tspan> <tspan class="u">//</tspan> <tspan class="u">sheet</tspan> <tspan class="u">2</tspan> <tspan class="u">of</tspan> <tspan class="u">3</tspan>    <tspan class="b">--+</tspan></text>
+</svg>

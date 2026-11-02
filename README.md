@@ -1,65 +1,26 @@
 <div align="center">
 
-<img src="./assets/banner.svg" alt="Pavan Kumar Balijepalli. AI Engineer. Building things that think, ship, and hold up in production." width="100%" />
+<img src="./assets/hero.svg" width="100%" alt="Animated ASCII art: a bunny peeking over a laptop, thinking in neural networks, beside a terminal that introduces Pavan Kumar Balijepalli (Bunny), Lead Data Scientist / AI Lead at Cigna." />
 
 <br/>
 
-<img src="https://img.shields.io/badge/AI%20Engineer-7%2B%20Years%20in%20Data%20Science-1F4E8C?style=for-the-badge&labelColor=10243F" alt="AI Engineer, 7+ years in data science" />
+<img src="https://img.shields.io/badge/Lead%20Data%20Scientist%20%2F%20AI%20Lead-Cigna-1F4E8C?style=for-the-badge&labelColor=10243F" alt="Lead Data Scientist / AI Lead at Cigna" />
+<img src="https://img.shields.io/badge/AI%20%2F%20ML-7%2B%20years-1F4E8C?style=for-the-badge&labelColor=10243F" alt="7+ years in AI/ML" />
 
-<br/>
-<br/>
-
-<a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/"><img src="https://img.shields.io/badge/LinkedIn-connect-10243F?style=flat-square" alt="LinkedIn" /></a>
+<a href="https://huggingface.co/pavankumarbalijepalli"><img src="https://img.shields.io/badge/Hugging%20Face-pavankumarbalijepalli-10243F?style=flat-square&logo=huggingface&logoColor=E8EDF2" alt="Hugging Face" /></a>
 <a href="https://instagram.com/bunnybethinking"><img src="https://img.shields.io/badge/Instagram-bunnybethinking-1F4E8C?style=flat-square&logo=instagram&logoColor=E8EDF2" alt="Instagram: bunnybethinking" /></a>
-<a href="https://github.com/pavankumarbalijepalli/kuwt"><img src="https://img.shields.io/badge/Building-KUWT-46566E?style=flat-square" alt="Building KUWT" /></a>
-<a href="https://github.com/pavankumarbalijepalli/connect-with-me"><img src="https://img.shields.io/badge/Say%20hi-connect--with--me-10243F?style=flat-square" alt="connect-with-me" /></a>
+<a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/"><img src="https://img.shields.io/badge/LinkedIn-connect-10243F?style=flat-square" alt="LinkedIn" /></a>
+<a href="https://github.com/pavankumarbalijepalli/connect-with-me"><img src="https://img.shields.io/badge/say%20hi-connect--with--me-46566E?style=flat-square" alt="connect-with-me" /></a>
 
 </div>
 
 <br/>
 
-<div align="center">
+## hey, I'm Bunny.
 
-```text
- ██████╗  █████╗ ██╗   ██╗ █████╗ ███╗   ██╗
- ██╔══██╗██╔══██╗██║   ██║██╔══██╗████╗  ██║
- ██████╔╝███████║██║   ██║███████║██╔██╗ ██║
- ██╔═══╝ ██╔══██║╚██╗ ██╔╝██╔══██║██║╚██╗██║
- ██║     ██║  ██║ ╚████╔╝ ██║  ██║██║ ╚████║
- ╚═╝     ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝
+Pavan on paper. I'm a **Lead Data Scientist / AI Lead at Cigna**, seven-plus years into AI/ML, and I've stopped thinking of "data science" and "AI engineering" as separate jobs. A model that never leaves a notebook doesn't help anyone, so most of my time goes into the unglamorous middle: turning a promising experiment into something that survives real traffic, real data drift, and real users who don't read the docs.
 
-   (\_/)     .---------------------------------------.
-   (o.o)  o  |  no-filter. comfortable being wrong.  |
-   (> <)     |  allergic to hype.                    |
-             '---------------------------------------'
-```
-
-</div>
-
-<br/>
-
-```text
-pavan@bunnybethinking:~$ cat status.txt
-
-  role ......... AI Engineer, 7+ years (data science -> agentic AI)
-  building ..... KUWT, AI-powered content automation
-  teaching ..... BITS Pilani WILP: Agentic AI, Conversational AI, LLMs
-  reading ...... how LLMs are actually pretrained
-  running ...... bunnybethinking, a village figuring this out together
-  rule #1 ...... fewer moving parts, more uptime
-
-pavan@bunnybethinking:~$ _
-```
-
----
-
-## The short version
-
-Seven-plus years in, I've stopped thinking of "data science" and "AI engineering" as separate jobs. A model that never leaves a notebook doesn't help anyone, so most of my time goes into the unglamorous middle: turning a promising experiment into something that survives real traffic, real data drift, and real users who don't read the docs.
-
-Lately that means a lot of **agentic systems**: LLMs that don't just answer, but plan, call tools, and know when to ask for help instead of guessing. I also spend a good chunk of time on the teaching side of this, guest lecturing on Agentic AI, Conversational AI, and LLMs, because explaining a system out loud is the fastest way to find the part you don't actually understand yet.
-
-<br/>
+Lately that means a lot of **agentic systems**: LLMs that don't just answer, but plan, call tools, and know when to ask for help instead of guessing. On the side I'm doing an **M.Tech in AI/ML at BITS Pilani** (most recently: ResNet50 transfer learning on chest X-rays for the Deep Neural Networks course), and guest lecturing there too.
 
 <table align="center">
 <tr>
@@ -89,50 +50,92 @@ Lately that means a lot of **agentic systems**: LLMs that don't just answer, but
 
 ---
 
-## What I'm building: [KUWT](https://github.com/pavankumarbalijepalli/kuwt)
+## what I'm digging into
+
+<img src="./assets/pretraining.svg" width="100%" alt="Animated ASCII blueprint of LLM pretraining: a loss curve drawing itself, a decoder-only transformer block with a forward pass lighting up, and a causal self-attention map." />
+
+Most of my day-to-day is applied: shipping systems, not training foundation models. But I've been pulling back toward the fundamentals: how LLMs are actually pretrained, the architecture and optimization choices underneath the abstractions I usually work above. You can't reason well about agentic systems, fine-tuning, or failure modes if you've only ever met a model as a black box behind an API.
+
+Some of that shows up on [Hugging Face](https://huggingface.co/pavankumarbalijepalli):
+
+| model | what it is |
+| :-- | :-- |
+| **TeLLM** | a Telugu LLM |
+| **phi2-sqlcoder** | Phi-2, fine-tuned to turn plain English into SQL |
+
+---
+
+## bunnybethinking
+
+> *be the mentor I never had.*
+
+I run **[bunnybethinking](https://instagram.com/bunnybethinking)**, AI/ML content for people who feel like outsiders in AI. Most AI content either talks down to beginners or talks past them. I'm building something in between, for people who are curious, a little overwhelmed, and tired of feeling like they showed up late. I'd rather build a **village** than an audience. No-filter, comfortable being wrong, allergic to hype.
+
+```text
+┌────────────────────────────┬────────────────────────────┐
+│ 01  ABCs of AI             │ 02  Pin it or Bin it       │
+│ fundamentals, explained    │ news + papers: worth       │
+│ like you're a person       │ keeping, or not?           │
+├────────────────────────────┼────────────────────────────┤
+│ 03  What I Tested          │ 04  What I'm Learning      │
+│ this week's experiments,   │ learning in public,        │
+│ wins and flops             │ wrong answers included     │
+├────────────────────────────┼────────────────────────────┤
+│ 05  Career tips            │ 06  Personal stories       │
+│ the stuff nobody           │ the long way round,        │
+│ tells you upfront          │ told honestly              │
+├────────────────────────────┼────────────────────────────┤
+│ 07  Reddit painpoints      │ 08  AI/Human Interactions  │
+│ what people are actually   │ where people and models    │
+│ stuck on, answered         │ meet, and get weird        │
+└────────────────────────────┴────────────────────────────┘
+```
+
+YouTube is home base, with quick hits on Instagram and LinkedIn. First up on YouTube: **"How I Finally Became Consistent Learning AI (4 Things I Had to Unlearn)."** Fair warning, it's about the thing I'm still working on.
+
+---
+
+## teaching at BITS Pilani (WILP)
+
+I guest lecture on **Agentic AI**, **Conversational AI**, and **LLMs**, and teach NLP Applications sessions: spell and grammar checking, QA, RAG, conversational AI, sentiment, privacy and ethics, machine translation, neural MT, and MT for Indic languages.
+
+```text
+  no slides. one whiteboard. first principles.
+
+  [ topic ] ──> what breaks? ──> [ next topic ] ──> what breaks? ──> ...
+
+  e.g.   machine translation
+               │  what breaks?
+               ▼
+         neural MT
+               │  what breaks for Telugu, Hindi, ...?
+               ▼
+         MT for Indic languages
+```
+
+Explaining a system out loud is the fastest way to find the part you don't actually understand yet, so the teaching feeds straight back into how I build.
+
+---
+
+## the long way here
+
+```text
+  applications ████████████████████████████████████████  200+
+  interviews   ███████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  37
+  the one      █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  1  <- Lead DS / AI Lead
+```
+
+Before this role: 200+ applications and 37 interviews. If you're in the middle of your own version of that chart, keep going. The bar on the bottom only needs to fill once.
+
+---
+
+## what I'm building: [KUWT](https://github.com/pavankumarbalijepalli/kuwt)
 
 > **KUWT** is an AI-powered content generation automation platform, built to keep technology enthusiasts and learners current with what's actually happening in AI, without the noise.
 
-```text
-   sources          agents            you
-  ┌────────┐      ┌─────────┐      ┌─────────┐
-  │ the    │ ───> │ filter  │ ───> │ signal, │
-  │ noise  │      │ + write │      │ no hype │
-  └────────┘      └─────────┘      └─────────┘
-```
-
 ---
 
-## Outside the day job: [bunnybethinking](https://instagram.com/bunnybethinking)
-
-I run **bunnybethinking**, an AI/ML content brand built around a simple idea: be the mentor I never had when I was starting out. Most AI content online either talks down to beginners or talks past them. I'm trying to build something in between, aimed at people who are curious, a little overwhelmed, and tired of feeling like an outsider in this space.
-
-It shows up as fundamentals breakdowns, weekly paper reads, "what I tested this week" experiments, and painpoints pulled straight from what people are actually asking on Reddit. Not a course funnel, just a village of people figuring this out together. No-filter, comfortable being wrong, allergic to hype.
-
-```text
-  ┌────────────────────────────────────────────────────────────┐
-  │  fundamentals breakdowns  ->  the ABCs of AI               │
-  │  weekly paper reads       ->  one paper, plain words       │
-  │  what I tested this week  ->  experiments, wins and flops  │
-  │  painpoints from Reddit   ->  what people actually ask     │
-  └────────────────────────────────────────────────────────────┘
-```
-
----
-
-## What I'm digging into right now
-
-Most of my day-to-day is applied: shipping systems, not training foundation models. But I've been pulling back toward the fundamentals lately: how LLMs are actually pretrained, the architecture and optimization choices underneath the abstractions I usually work above. It's partly curiosity, partly the belief that you can't reason well about agentic systems, fine-tuning, or failure modes if you've only ever worked with a model as a black box behind an API.
-
----
-
-## Guest Lecturer: BITS Pilani (WILP)
-
-I guest lecture on **Agentic AI**, **Conversational AI**, and **LLMs** at BITS Pilani's Work Integrated Learning Programmes. I like teaching this stuff for a selfish reason too: explaining a system out loud is the fastest way to find the part you don't actually understand yet, so it feeds back into how I build.
-
----
-
-## Tools I reach for
+## tools I reach for
 
 <div align="center">
 
@@ -154,7 +157,7 @@ I guest lecture on **Agentic AI**, **Conversational AI**, and **LLMs** at BITS P
 
 ---
 
-## The numbers
+## the numbers
 
 <p align="center">
   <a href="https://github.com/pavankumarbalijepalli?tab=repositories">
@@ -176,25 +179,14 @@ I guest lecture on **Agentic AI**, **Conversational AI**, and **LLMs** at BITS P
 
 <div align="center">
 
-## Let's talk
+<img src="./assets/footer.svg" width="100%" alt="Animated ASCII sea chart: a compass rose, a lighthouse with a sweeping beam, and a boat bobbing on waves, sailing from 'first video' to 'the village'. Analog in a digital life." />
 
-Follow along, raise an issue on my [connect-with-me](https://github.com/pavankumarbalijepalli/connect-with-me) repo, or find me on [LinkedIn](https://www.linkedin.com/in/pavan-kumar-balijepalli/).
+### let's talk
 
-```text
-                 N
-                 ^
-                 |
-          W <----+----> E
-                 |
-                 v
-                 S
-
-   ~~  ~   ~~~   ~~    ~    ~~~   ~~   ~    ~~~  ~~
- ~   ~~~   ~~  ~    ~~~  ~~    ~   ~~~   ~~   ~    ~
-        analog in a digital life.
-        a chart drawn at sea.
-```
+Raise an issue on [connect-with-me](https://github.com/pavankumarbalijepalli/connect-with-me), find me on [LinkedIn](https://www.linkedin.com/in/pavan-kumar-balijepalli/), or come hang out at [bunnybethinking](https://instagram.com/bunnybethinking).
 
 <img src="https://komarev.com/ghpvc/?username=pavankumarbalijepalli&color=1F4E8C&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+
+<sub>art is hand-built ASCII, animated with CSS. regenerate with <code>python3 assets/generate.py</code></sub>
 
 </div>
