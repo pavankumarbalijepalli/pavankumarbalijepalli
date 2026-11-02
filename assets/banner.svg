@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Pavan Kumar Balijepalli</title>
+  <desc id="d">AI Engineer. Building things that think, ship, and hold up in production.</desc>
+
+  <defs>
+    <!-- blueprint grid: 40px pitch (space-4), hairline in border colour -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#C3CEDA" stroke-width="1"/>
+    </pattern>
+    <!-- dot grid on the cobalt slab, 40px pitch -->
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse" x="20" y="20">
+      <circle cx="0" cy="0" r="3" fill="#E8EDF2" fill-opacity=".85"/>
+    </pattern>
+    <clipPath id="cobaltClip"><rect x="1020" y="72" width="220" height="340" rx="12"/></clipPath>
+  </defs>
+
+  <!-- ground -->
+  <rect width="1200" height="400" fill="#E8EDF2"/>
+  <rect width="1200" height="400" fill="url(#grid)" opacity=".7"/>
+
+  <!-- block stack (mirrors the identity cover) -->
+  <rect x="700" y="-12" width="300" height="256" rx="12" fill="#10243F"/>
+  <rect x="1020" y="72" width="220" height="340" rx="12" fill="#1F4E8C"/>
+  <rect x="1020" y="72" width="220" height="340" fill="url(#dots)" clip-path="url(#cobaltClip)"/>
+  <rect x="700" y="260" width="112" height="152" rx="6" fill="#7E9CC4"/>
+  <rect x="828" y="260" width="172" height="152" rx="6" fill="#C3CEDA"/>
+
+  <!-- terminal inside the ink slab -->
+  <g font-family="'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+    <circle cx="728" cy="34" r="5" fill="#7E9CC4"/>
+    <circle cx="748" cy="34" r="5" fill="#46566E"/>
+    <circle cx="768" cy="34" r="5" fill="#46566E"/>
+    <text x="728" y="82"  fill="#7E9CC4">$ whoami</text>
+    <text x="728" y="108" fill="#E8EDF2">pavan, ai engineer</text>
+    <text x="728" y="146" fill="#7E9CC4">$ ls ./now</text>
+    <text x="728" y="172" fill="#E8EDF2">agents/  kuwt/</text>
+    <text x="728" y="198" fill="#E8EDF2">lectures/  papers/</text>
+    <text x="728" y="226" fill="#7E9CC4">$</text>
+    <rect x="750" y="213" width="10" height="17" fill="#7E9CC4"/>
+  </g>
+
+  <!-- name + tagline -->
+  <g>
+    <text x="48" y="92" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="2.4" fill="#1F4E8C">AI ENGINEER  /  DATA SCIENCE  /  AGENTIC SYSTEMS</text>
+    <text font-family="'Apple Garamond', 'EB Garamond', Garamond, Georgia, serif" font-weight="600" font-size="88" letter-spacing="-1" fill="#10243F">
+      <tspan x="46" y="188">Pavan Kumar</tspan>
+      <tspan x="46" y="272">Balijepalli</tspan>
+    </text>
+    <rect x="48" y="304" width="96" height="3" fill="#1F4E8C"/>
+    <text font-family="Lora, 'Source Serif 4', Georgia, serif" font-style="italic" font-size="21" fill="#46566E">
+      <tspan x="48" y="342">building things that think, ship,</tspan>
+      <tspan x="48" y="370">and hold up in production.</tspan>
+    </text>
+  </g>
+</svg>
