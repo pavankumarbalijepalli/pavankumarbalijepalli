@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Animated ASCII art: a bunny peeking over a laptop, thinking in neural networks, beside a terminal that introduces Pavan Kumar Balijepalli (Bunny), Lead Data Scientist / AI Lead at Cigna." />
+<img src="./assets/hero.svg" width="100%" alt="Animated ASCII art: an ASCII self-portrait of Pavan Kumar Balijepalli printed like a cyanotype, with blueprint callouts and a neural-network thought cloud, beside a terminal introducing him as Lead Data Scientist / AI Lead at Cigna." />
 
 <br/>
 
@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/badge/AI%20%2F%20ML-7%2B%20years-1F4E8C?style=for-the-badge&labelColor=10243F" alt="7+ years in AI/ML" />
 
 <a href="https://huggingface.co/pavankumarbalijepalli"><img src="https://img.shields.io/badge/Hugging%20Face-pavankumarbalijepalli-10243F?style=flat-square&logo=huggingface&logoColor=E8EDF2" alt="Hugging Face" /></a>
-<a href="https://instagram.com/bunnybethinking"><img src="https://img.shields.io/badge/Instagram-bunnybethinking-1F4E8C?style=flat-square&logo=instagram&logoColor=E8EDF2" alt="Instagram: bunnybethinking" /></a>
+<a href="https://instagram.com/balijepallipavan"><img src="https://img.shields.io/badge/Instagram-%40balijepallipavan-1F4E8C?style=flat-square&logo=instagram&logoColor=E8EDF2" alt="Instagram: @balijepallipavan" /></a>
 <a href="https://www.linkedin.com/in/pavan-kumar-balijepalli/"><img src="https://img.shields.io/badge/LinkedIn-connect-10243F?style=flat-square" alt="LinkedIn" /></a>
 <a href="https://github.com/pavankumarbalijepalli/connect-with-me"><img src="https://img.shields.io/badge/say%20hi-connect--with--me-46566E?style=flat-square" alt="connect-with-me" /></a>
 
@@ -16,9 +16,9 @@
 
 <br/>
 
-## hey, I'm Bunny.
+## hey, I'm Pavan.
 
-Pavan on paper. I'm a **Lead Data Scientist / AI Lead at Cigna**, seven-plus years into AI/ML, and I've stopped thinking of "data science" and "AI engineering" as separate jobs. A model that never leaves a notebook doesn't help anyone, so most of my time goes into the unglamorous middle: turning a promising experiment into something that survives real traffic, real data drift, and real users who don't read the docs.
+I'm a **Lead Data Scientist / AI Lead at Cigna**, seven-plus years into AI/ML, and I've stopped thinking of "data science" and "AI engineering" as separate jobs. A model that never leaves a notebook doesn't help anyone, so most of my time goes into the unglamorous middle: turning a promising experiment into something that survives real traffic, real data drift, and real users who don't read the docs.
 
 Lately that means a lot of **agentic systems**: LLMs that don't just answer, but plan, call tools, and know when to ask for help instead of guessing. On the side I'm doing an **M.Tech in AI/ML at BITS Pilani** (most recently: ResNet50 transfer learning on chest X-rays for the Deep Neural Networks course), and guest lecturing there too.
 
@@ -65,11 +65,11 @@ Some of that shows up on [Hugging Face](https://huggingface.co/pavankumarbalijep
 
 ---
 
-## bunnybethinking
+## @balijepallipavan
 
 > *be the mentor I never had.*
 
-I run **[bunnybethinking](https://instagram.com/bunnybethinking)**, AI/ML content for people who feel like outsiders in AI. Most AI content either talks down to beginners or talks past them. I'm building something in between, for people who are curious, a little overwhelmed, and tired of feeling like they showed up late. I'd rather build a **village** than an audience. No-filter, comfortable being wrong, allergic to hype.
+I run **[@balijepallipavan](https://instagram.com/balijepallipavan)**, AI/ML content for people who feel like outsiders in AI. Most AI content either talks down to beginners or talks past them. I'm building something in between, for people who are curious, a little overwhelmed, and tired of feeling like they showed up late. I'd rather build a **village** than an audience. No-filter, comfortable being wrong, allergic to hype.
 
 ```text
 ┌────────────────────────────┬────────────────────────────┐
@@ -183,10 +183,10 @@ Before this role: 200+ applications and 37 interviews. If you're in the middle o
 
 ### let's talk
 
-Raise an issue on [connect-with-me](https://github.com/pavankumarbalijepalli/connect-with-me), find me on [LinkedIn](https://www.linkedin.com/in/pavan-kumar-balijepalli/), or come hang out at [bunnybethinking](https://instagram.com/bunnybethinking).
+Raise an issue on [connect-with-me](https://github.com/pavankumarbalijepalli/connect-with-me), find me on [LinkedIn](https://www.linkedin.com/in/pavan-kumar-balijepalli/), or come hang out at [@balijepallipavan](https://instagram.com/balijepallipavan).
 
 <img src="https://komarev.com/ghpvc/?username=pavankumarbalijepalli&color=1F4E8C&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
 
-<sub>art is hand-built ASCII, animated with CSS. regenerate with <code>python3 assets/generate.py</code></sub>
+<sub>art is hand-built ASCII, animated with CSS. the portrait is a photo run through <code>assets/portrait_from_photo.py</code>. regenerate with <code>python3 assets/generate.py</code></sub>
 
 </div>

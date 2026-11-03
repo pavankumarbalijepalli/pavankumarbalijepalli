@@ -2,7 +2,7 @@
 """Generates the animated ASCII-art SVGs used in the profile README.
 
 Everything is drawn with monospace glyphs on a character grid, coloured with the
-bunnybethinking "Cyanotype" palette. Animations are glyph-based (colour / opacity
+@balijepallipavan "Cyanotype" palette. Animations are glyph-based (colour / opacity
 changes on characters), so the art stays aligned whatever monospace font the
 viewer's browser picks.
 
@@ -112,124 +112,104 @@ def stars(cv, rows, cols, n, avoid, seed, classes):
 
 
 # ============================================================================ HERO
+BRAND = "@balijepallipavan"
+PORTRAIT_RAMP = " .:-=+*#%@"
+
+
+def portrait_svg(x, y, fs, lh, dev_step):
+    """The ASCII portrait (assets/portrait.txt) as a cyanotype print that develops row by row."""
+    lines = open(os.path.join(HERE, "portrait.txt"), encoding="utf-8").read().split("\n")
+    tone = lambda ch: "pa" if PORTRAIT_RAMP.index(ch) >= 6 else "pb" if PORTRAIT_RAMP.index(ch) >= 3 else "pc"
+    out = [f'<g font-size="{fs}">']
+    for r, line in enumerate(lines):
+        if not line.strip():
+            continue
+        runs = []
+        for ch in line:
+            k = None if ch == " " else tone(ch)
+            if runs and runs[-1][0] == k:
+                runs[-1][1] += ch
+            else:
+                runs.append([k, ch])
+        body = "".join(escape(t) if k is None else f'<tspan class="{k}">{escape(t)}</tspan>' for k, t in runs)
+        out.append(f'<text class="dev" style="font-size:{fs}px;animation-delay:{r * dev_step:.2f}s" '
+                   f'x="{x}" y="{y + (r + 1) * lh:.1f}">{body}</text>')
+    out.append("</g>")
+    return "\n".join(out), len(lines)
+
+
 def hero():
     ROWS, COLS = 33, 138
     T = 22.0
     a = Anim(T)
     cv = Canvas(ROWS, COLS)        # static + per-char animated glyphs
-    eyes_open = Canvas(ROWS, COLS)
-    eyes_shut = Canvas(ROWS, COLS)
+    x0, y0 = 26, 32
 
-    # ---- blueprint frame + annotations
+    # ---- blueprint frame + labels
     cv.put(0, 0, "+--", "d"); cv.put(0, COLS - 3, "--+", "d")
     cv.put(ROWS - 1, 0, "+--", "d"); cv.put(ROWS - 1, COLS - 3, "--+", "d")
     cv.put(1, 0, "|", "d"); cv.put(1, COLS - 1, "|", "d")
     cv.put(ROWS - 2, 0, "|", "d"); cv.put(ROWS - 2, COLS - 1, "|", "d")
-    cv.put(0, 5, "FIG. 01", "m"); cv.put(0, 13, "BUNNY, THINKING  //  CYANOTYPE", "d")
-    cv.put(ROWS - 1, COLS - 38, "bunnybethinking", "m")
+    cv.put(0, 5, "FIG. 01", "m"); cv.put(0, 13, "PAVAN, THINKING  //  CYANOTYPE", "d")
+    cv.put(ROWS - 1, COLS - 40, BRAND, "m")
     cv.put(ROWS - 1, COLS - 22, "// sheet 1 of 3", "d")
 
-    # ---- the bunny (peeking over a laptop)
-    B_R, B_C = 6, 5
-    bunny = [
-        r"      .-.            .-.",
-        r"     /   \          /   \ ",
-        r"    /  _  \        /  _  \ ",
-        r"    | / \ |        | / \ |",
-        r"    | | | |        | | | |",
-        r"    | | | |        | | | |",
-        r"    | | | |        | | | |",
-        r"    | \_/ |        | \_/ |",
-        r"     \    '.______.'    /",
-        r"     .'                '.",
-        r"    /                    \ ",
-        r"   |                      |",
-        r"   |                      |",
-        r"   |                      |",
-        r"   |  -=      \/      =-  |",
-        r"   | -=      (__)      =- |",
-        r"    \                    /",
-        r" .---'-.______________.-'---.",
-        r' |  (")(")          (")(")  |',
-        r" |                          |",
-        r" |          .----.          |",
-        r" |         ( o--o )         |",
-        r" |          '----'          |",
-        r" |__________________________|",
-        r"/____________________________\ ",
-    ]
-    masks = [
-        "",
-        "",
-        "        m             m",
-        "      m m           m m",
-        "      m m           m m",
-        "      m m           m m",
-        "      m m           m m",
-        "      mmm           mmm",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "      mm      mm      mm",
-        "     mm      mmmm      mm",
-        "",
-        "",
-        "    mmmmmm          mmmmmm",
-        "",
-        "            mmmmmm",
-        "           mmmmmmmm",
-        "            mmmmmm",
-    ]
-    cv.art(B_R, B_C, bunny, "p", masks, {"m": "m"})
-    # eyes: open / shut frames toggle (blink)
-    eyes_open.art(B_R + 11, B_C + 1, [
-        r"      .--.      .--.",
-        r"     ( @  )    ( @  )",
-        r"      '--'      '--'",
-    ], "p", [ "", "       m          m", ""], {"m": "m"})
-    eyes_shut.art(B_R + 12, B_C + 1, [r"      ----      ----"], "p")
+    # ---- portrait card (pixel-positioned, its own font size)
+    card_x, card_y, card_w, card_h = 38, 50, 362, 426
+    p_fs, p_lh = 7.0, 8.43
+    portrait, p_rows = portrait_svg(card_x + 12, card_y + 4, p_fs, p_lh, 0.045)
+    card = (f'<rect x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="6" fill="{SURFACE}"/>'
+            f'<rect x="{card_x + 6}" y="{card_y + 6}" width="{card_w - 12}" height="{card_h - 12}" rx="3" '
+            f'fill="none" stroke="{BORDER}" stroke-width="1"/>')
+    scan = (f'<clipPath id="cardclip"><rect x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="6"/></clipPath>'
+            f'<g clip-path="url(#cardclip)"><rect class="scan" x="{card_x}" y="{card_y - 24}" width="{card_w}" '
+            f'height="24" fill="url(#scangrad)"/></g>')
+    cv.put(26, 2, "PLATE 01", "m"); cv.put(26, 12, "self-portrait, cyanotype", "d")
+    cv.put(27, 2, f"80 x {p_rows} chars", "d"); cv.put(27, 21, "//", "d")
+    cv.put(27, 24, "ramp", "d"); cv.put(27, 29, ".:-=+*#%@", "m")
 
-    # thought bubbles rising, then a neural-net cloud
-    for i, (r, c, s) in enumerate([(B_R + 10, B_C + 30, "o"), (B_R + 8, B_C + 32, "o"),
-                                   (B_R + 6, B_C + 34, "O")]):
-        cv.put(r, c, s, f"m bub{i}")
+    # ---- callouts pointing at the portrait
+    notes = [(12, "round glasses, reads papers"),
+             (15, "mustache: load-bearing"),
+             (19, "beard: grown, not prompted"),
+             (22, "checked shirt, checked facts")]
+    for r, text in notes:
+        cv.put(r, 46, "<--", "m co"); cv.put(r, 50, text, "p co")
 
-    C_R, C_C = 2, B_C + 29
+    # ---- thought bubbles rising from the curls into a neural-net cloud
+    for i, (r, c, ch) in enumerate([(11, 45, "."), (10, 46, "o"), (9, 47, "O")]):
+        cv.put(r, c, ch, f"m bub{i}")
+    C_R, C_C = 0, 46
     cloud = [
-        r"        .-~~~~-.      .-~~~~~-.",
-        r"   .-~~'        '-~~-'         '~~-.",
-        r"  (    o---.                .---o    )",
-        r" (          \--( o )--.    /          )",
-        r"(      o-----:         >--o------o     )",
-        r" (          /--( o )--'    \          )",
-        r"  (    o---'                '---o    )",
-        r"   '-._        _.-~~-._        _.-'",
-        r"       '~~~~~~'        '~~~~~~'",
+        r"",
+        r"      .-~~~-.     .-~~~~-.",
+        r"  .-~'       '-~~-'       '~-.",
+        r" (   o--.             .--o    )",
+        r"(        \-( o )-.   /         )",
+        r"(   o-----:       >-o-----o    )",
+        r"(        /-( o )-'   \         )",
+        r" (   o--'             '--o    )",
+        r"  '-._      _.-~~-._      _.-'",
+        r"      '~~~~'        '~~~~'",
     ]
     cv.art(C_R, C_C, cloud, "d")
-    # nodes pulse layer by layer, left to right (a forward pass)
     for r, line in enumerate(cloud):
         for c, ch in enumerate(line):
             if ch == "o":
-                L = 0 if c < 10 else 1 if c < 22 else 2 if c < 30 else 3
+                L = 0 if c < 8 else 1 if c < 16 else 2 if c < 23 else 3
                 cv.put(C_R + r, C_C + c, "o", f"p node{L}")
-    cv.put(C_R + 10, C_C + 4, "is the model actually thinking?", "m")
 
-    # dimension line under the bunny
-    cv.put(ROWS - 2, B_C, "|<-------", "d")
-    cv.put(ROWS - 2, B_C + 10, "7+ yrs in AI / ML", "m")
-    cv.put(ROWS - 2, B_C + 28, "------->|", "d")
+    # dimension line
+    cv.put(ROWS - 3, 2, "|<-------", "d")
+    cv.put(ROWS - 3, 12, "7+ yrs in AI / ML", "m")
+    cv.put(ROWS - 3, 30, "------->|", "d")
 
     # ---- terminal
-    TR, TC, TW = 2, 74, 62
-    top = "." + "-" * (TW - 2) + "."
-    cv.put(TR, TC, top, "m")
+    TR, TC, TW = 2, 79, 57
+    cv.put(TR, TC, "." + "-" * (TW - 2) + ".", "m")
     cv.put(TR + 1, TC, "|", "m"); cv.put(TR + 1, TC + TW - 1, "|", "m")
     cv.put(TR + 1, TC + 2, "o", "p"); cv.put(TR + 1, TC + 4, "o", "m"); cv.put(TR + 1, TC + 6, "o", "m")
-    cv.put(TR + 1, TC + 21, "bunny@bunnybethinking: ~", "m")
+    cv.put(TR + 1, TC + 17, "pavan@balijepallipavan: ~", "m")
     cv.put(TR + 2, TC, "|" + "-" * (TW - 2) + "|", "m")
     body_rows = 25
     for i in range(body_rows):
@@ -259,16 +239,16 @@ def hero():
         row += 1
 
     cmd("whoami")
-    out([("Pavan Kumar Balijepalli. friends call me ", "p"), ("Bunny", "m"), (".", "p")])
+    out([("Pavan Kumar Balijepalli", "p")])
     out([("Lead Data Scientist / AI Lead ", "p"), ("@ Cigna", "m")])
     out([("7+ yrs in AI/ML, mostly the unglamorous middle", "p")])
     row += 1; t += 0.6
     cmd("cat now.txt")
-    for k, v in [("shipping", "agentic systems that hold up in prod"),
+    for k, v in [("shipping", "agentic systems, built to last"),
                  ("studying", "M.Tech AIML @ BITS Pilani"),
-                 ("teaching", "guest lectures @ BITS Pilani WILP"),
+                 ("teaching", "guest lectures @ BITS WILP"),
                  ("digging", "how LLMs are actually pretrained"),
-                 ("building", "bunnybethinking, a village"),
+                 ("building", f"{BRAND}, a village"),
                  ]:
         out([(f"{k} ", "m"), ("." * (12 - len(k)), "d"), (" " + v, "p")])
     row += 1; t += 0.6
@@ -291,26 +271,28 @@ def hero():
     cursor_row, cursor_col = row, TC + 4
     cursor_on = t / T * 100
 
-    # stars
-    stars(cv, ROWS, COLS, 46, [(0, TC - 1, ROWS - 1, TC + TW), (C_R - 1, C_C - 1, C_R + 10, C_C + 40),
-                               (B_R - 1, B_C - 1, B_R + 25, B_C + 31), (ROWS - 2, 0, ROWS - 1, COLS)],
+    # stars, kept off the card, cloud, notes and terminal
+    stars(cv, ROWS, COLS, 30, [(0, TC - 1, ROWS - 1, TC + TW), (0, 0, 27, 45), (0, 45, 10, 78),
+                               (11, 45, 23, 78), (ROWS - 3, 0, ROWS - 1, COLS)],
           seed=7, classes=["d tw0", "d tw1", "d tw2", "m tw3"])
 
     W = int(COLS * CW + 56)
     H = ROWS * LH + 40
-    x0, y0 = 26, 32
     cursor = Canvas(ROWS, COLS)
     cursor.put(cursor_row, cursor_col, "█", "m cur")
 
     style = f"""
 .p{{fill:{BG}}} .m{{fill:{MIST}}} .d{{fill:{INK_MUTED}}}
+.pa{{fill:{INK}}} .pb{{fill:{COBALT}}} .pc{{fill:{MIST}}}
+.dev{{animation:dev 1.4s ease-out both}}
+@keyframes dev{{0%{{fill-opacity:0}}40%{{fill-opacity:.35}}100%{{fill-opacity:1}}}}
+.co{{animation:dev 1s ease-out 2.6s both}}
+.scan{{animation:scan 7s ease-in-out infinite}}
+@keyframes scan{{0%{{transform:translateY(0)}}70%,100%{{transform:translateY({card_h + 24}px)}}}}
 .cur{{animation:blink 1s steps(1) infinite}}
 @keyframes blink{{50%{{fill-opacity:0}}}}
 .curwrap{{animation:cw {T}s linear infinite}}
 @keyframes cw{{0%,{cursor_on - 0.01:.2f}%{{opacity:0}}{cursor_on:.2f}%,95.49%{{opacity:1}}95.5%,100%{{opacity:0}}}}
-.open{{animation:eo 5s infinite}} .shut{{animation:es 5s infinite;opacity:0}}
-@keyframes eo{{0%,92%,97%,100%{{opacity:1}}93%,96%{{opacity:0}}}}
-@keyframes es{{0%,92%,97%,100%{{opacity:0}}93%,96%{{opacity:1}}}}
 .node0,.node1,.node2,.node3{{animation:pulse 2.4s ease-in-out infinite}}
 .node1{{animation-delay:.3s}} .node2{{animation-delay:.6s}} .node3{{animation-delay:.9s}}
 @keyframes pulse{{0%,100%{{fill:{INK_MUTED}}}35%{{fill:{BG}}}60%{{fill:{MIST}}}}}
@@ -322,14 +304,15 @@ def hero():
 @keyframes tw{{0%,100%{{fill-opacity:.25}}50%{{fill-opacity:1}}}}
 {chr(10).join(a.css)}
 """
-    body = (cv.svg(x0, y0)
-            + f'\n<g class="open">{eyes_open.svg(x0, y0)}</g>'
-            + f'\n<g class="shut">{eyes_shut.svg(x0, y0)}</g>'
+    defs = (f'<defs><linearGradient id="scangrad" x1="0" y1="0" x2="0" y2="1">'
+            f'<stop offset="0" stop-color="{MIST}" stop-opacity="0"/>'
+            f'<stop offset="1" stop-color="{COBALT}" stop-opacity=".22"/></linearGradient></defs>')
+    body = (defs + card + "\n" + portrait + "\n" + scan + "\n" + cv.svg(x0, y0)
             + f'\n<g class="curwrap">{cursor.svg(x0, y0)}</g>')
-    return wrap_svg(W, H, style, body, "Bunny, thinking",
-                    "Animated ASCII art: a bunny peeking over a laptop, thinking in neural "
-                    "networks, next to a terminal introducing Pavan Kumar Balijepalli (Bunny), "
-                    "Lead Data Scientist / AI Lead at Cigna.", INK)
+    return wrap_svg(W, H, style, body, "Pavan, thinking",
+                    "Animated ASCII art: an ASCII self-portrait of Pavan Kumar Balijepalli printed like a "
+                    "cyanotype, with blueprint callouts, a neural-network thought cloud, and a terminal "
+                    "introducing him as Lead Data Scientist / AI Lead at Cigna.", INK)
 
 
 # ===================================================================== PRETRAINING
@@ -342,7 +325,7 @@ def pretraining():
     cv.put(0, 0, "+--", "b"); cv.put(0, COLS - 3, "--+", "b")
     cv.put(ROWS - 1, 0, "+--", "b"); cv.put(ROWS - 1, COLS - 3, "--+", "b")
     cv.put(0, 5, "FIG. 02", "c"); cv.put(0, 13, "HOW LLMs ARE ACTUALLY PRETRAINED  //  what I'm digging into", "u")
-    cv.put(ROWS - 1, COLS - 38, "bunnybethinking", "c")
+    cv.put(ROWS - 1, COLS - 40, BRAND, "c")
     cv.put(ROWS - 1, COLS - 22, "// sheet 2 of 3", "u")
 
     # ---- left: loss curve drawing itself
@@ -472,7 +455,7 @@ def footer():
     cv.put(0, 0, "+--", "d"); cv.put(0, COLS - 3, "--+", "d")
     cv.put(ROWS - 1, 0, "+--", "d"); cv.put(ROWS - 1, COLS - 3, "--+", "d")
     cv.put(0, 5, "FIG. 03", "m"); cv.put(0, 13, "A CHART DRAWN AT SEA", "d")
-    cv.put(ROWS - 1, COLS - 38, "bunnybethinking", "m")
+    cv.put(ROWS - 1, COLS - 40, BRAND, "m")
     cv.put(ROWS - 1, COLS - 22, "// sheet 3 of 3", "d")
 
     # compass rose
