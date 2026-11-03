@@ -1,32 +1,69 @@
 #!/usr/bin/env python3
-"""Generates the animated ASCII-art SVGs used in the profile README.
+"""Generates the animated SVGs used in the profile README (the "trailer").
 
-Everything is drawn with monospace glyphs on a character grid, coloured with the
-@balijepallipavan "Cyanotype" palette. Animations are glyph-based (colour / opacity
-changes on characters), so the art stays aligned whatever monospace font the
-viewer's browser picks.
+    pip install fonttools brotli
+    python3 assets/generate.py        # rewrites assets/*.svg
 
-    python3 assets/generate.py      # rewrites assets/*.svg
+Art is drawn with monospace glyphs on a character grid, in the @balijepallipavan
+"Cyanotype" palette. Fonts (assets/fonts, SIL OFL) are subset and embedded in each SVG,
+so GitHub shows real type and the ASCII stays aligned on every machine.
 """
+import base64
+import io
 import os
 import random
 from html import escape
 
-HERE = os.path.dirname(os.path.abspath(__file__))
+from fontTools import subset
+from fontTools.ttLib import TTFont
 
-# palette (tokens from the design system)
+HERE = os.path.dirname(os.path.abspath(__file__))
+BRAND = "@balijepallipavan"
+
+# palette (design-system tokens)
 BG, SURFACE, INK, INK_MUTED = "#E8EDF2", "#F3F6F9", "#10243F", "#46566E"
 COBALT, MIST, BORDER = "#1F4E8C", "#7E9CC4", "#C3CEDA"
 
-FS, LH = 14, 18          # font size, line height (px)
-CW = FS * 0.602          # nominal monospace advance, used only for canvas sizing
-FONT = ("ui-monospace, 'JetBrains Mono', 'Cascadia Mono', SFMono-Regular, Menlo, "
-        "Monaco, 'DejaVu Sans Mono', 'Liberation Mono', 'Courier New', monospace")
+FS, LH = 14, 18           # grid font size and line height (px)
+CW = FS * 0.6             # JetBrains Mono advance is exactly 0.6em
+COLS = 138
+WIDTH = int(COLS * CW + 56)
+X0, Y0 = 26, 32
+
+MONO = "'PKB Mono', ui-monospace, Menlo, Consolas, monospace"
+DISPLAY = "'PKB Garamond', 'Apple Garamond', Garamond, Georgia, serif"
+SERIF = "'PKB Lora', Georgia, serif"
+SANS = "'PKB Grotesk', 'Helvetica Neue', Arial, sans-serif"
+ASCII = "".join(chr(c) for c in range(32, 127)) + "·"
+
+
+# --------------------------------------------------------------------------- fonts
+def font_face(alias, file, text, weight=400, style="normal"):
+    """@font-face with the font subset to `text`, as an embedded woff2 data URI."""
+    font = TTFont(os.path.join(HERE, "fonts", file))
+    opts = subset.Options()
+    opts.flavor = "woff2"
+    opts.layout_features = ["kern"]          # no ligatures: keeps ASCII art literal
+    opts.name_IDs = []
+    opts.notdef_outline = True
+    sub = subset.Subsetter(opts)
+    sub.populate(text=text + " ")
+    sub.subset(font)
+    buf = io.BytesIO()
+    font.flavor = "woff2"
+    font.save(buf)
+    data = base64.b64encode(buf.getvalue()).decode()
+    return (f"@font-face{{font-family:'{alias}';font-weight:{weight};font-style:{style};"
+            f"src:url(data:font/woff2;base64,{data}) format('woff2')}}")
+
+
+def mono_face():
+    return font_face("PKB Mono", "JetBrainsMono-Regular.woff2", ASCII)
 
 
 # --------------------------------------------------------------------------- grid
 class Canvas:
-    def __init__(self, rows, cols):
+    def __init__(self, rows, cols=COLS):
         self.rows, self.cols = rows, cols
         self.g = [[(" ", None) for _ in range(cols)] for _ in range(rows)]
 
@@ -36,14 +73,13 @@ class Canvas:
                 self.g[r][c + i] = (ch, cls)
 
     def art(self, r, c, lines, cls, masks=None, palette=None):
-        """Draw multi-line art; optional per-char mask letters map to classes."""
         for i, line in enumerate(lines):
             mask = masks[i] if masks and i < len(masks) else ""
             for j, ch in enumerate(line):
                 k = mask[j] if j < len(mask) else "."
                 self.put(r + i, c + j, ch, palette.get(k, cls) if palette else cls)
 
-    def svg(self, x0, y0):
+    def svg(self, x0=X0, y0=Y0):
         out = []
         for r, row in enumerate(self.g):
             if all(ch == " " for ch, _ in row):
@@ -56,25 +92,23 @@ class Canvas:
                     runs[-1][1] += ch
                 else:
                     runs.append([key, ch])
-            parts = "".join(
-                escape(t) if c is None else f'<tspan class="{c}">{escape(t)}</tspan>'
-                for c, t in runs)
+            parts = "".join(escape(t) if c is None else f'<tspan class="{c}">{escape(t)}</tspan>'
+                            for c, t in runs)
             out.append(f'<text x="{x0}" y="{y0 + r * LH}">{parts}</text>')
         return "\n".join(out)
 
 
 class Anim:
-    """Collects CSS keyframes for timed reveals within a looping cycle."""
+    """CSS keyframes for timed reveals within a looping cycle."""
 
     def __init__(self, period):
         self.T, self.css, self.n = period, [], 0
 
-    def reveal(self, t_on, t_off=None, hide_at=0.955):
-        """Class that is invisible until t_on (s), visible until hide_at of the cycle."""
+    def reveal(self, t_on, hide_at=0.955):
         self.n += 1
         name = f"k{self.n}"
         on = max(0.01, min(t_on / self.T, hide_at - 0.01)) * 100
-        off = (t_off / self.T * 100) if t_off else hide_at * 100
+        off = hide_at * 100
         self.css.append(
             f".{name}{{animation:{name} {self.T}s linear infinite}}"
             f"@keyframes {name}{{0%,{on - 0.01:.2f}%{{fill-opacity:0}}"
@@ -82,45 +116,60 @@ class Anim:
         return name
 
 
-def wrap_svg(w, h, style, body, title, desc, bg, radius=12, border=None):
-    stroke = f' stroke="{border}" stroke-width="1"' if border else ""
+def wrap_svg(h, style, body, title, desc, fonts):
+    w = WIDTH
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-labelledby="t d" xml:space="preserve">
 <title id="t">{escape(title)}</title>
 <desc id="d">{escape(desc)}</desc>
 <style>
-text{{font-family:{FONT};font-size:{FS}px;white-space:pre;font-variant-ligatures:none;font-feature-settings:'liga' 0,'calt' 0}}
+{chr(10).join(fonts)}
+text{{font-family:{MONO};font-size:{FS}px;white-space:pre;font-variant-ligatures:none}}
+.p{{fill:{BG}}} .m{{fill:{MIST}}} .d{{fill:{INK_MUTED}}}
 {style}
 @media (prefers-reduced-motion: reduce){{*{{animation:none!important;fill-opacity:1!important;opacity:1!important}}}}
 </style>
-<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="{radius}" fill="{bg}"{stroke}/>
+<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="12" fill="{INK}"/>
 {body}
 </svg>
 """
 
 
-def stars(cv, rows, cols, n, avoid, seed, classes):
+def frame(cv, fig, label, sheet):
+    rows = cv.rows
+    cv.put(0, 0, "+--", "d"); cv.put(0, COLS - 3, "--+", "d")
+    cv.put(rows - 1, 0, "+--", "d"); cv.put(rows - 1, COLS - 3, "--+", "d")
+    cv.put(0, 5, fig, "m"); cv.put(0, 6 + len(fig), label, "d")
+    cv.put(rows - 1, COLS - 40, BRAND, "m")
+    cv.put(rows - 1, COLS - 22, f"// sheet {sheet} of 3", "d")
+
+
+def stars(cv, n, avoid, seed, classes):
     rnd = random.Random(seed)
     placed = 0
     while placed < n:
-        r, c = rnd.randrange(rows), rnd.randrange(cols)
-        if any(r0 <= r <= r1 and c0 <= c <= c1 for r0, c0, r1, c1 in avoid):
+        r, c = rnd.randrange(1, cv.rows - 1), rnd.randrange(1, cv.cols - 1)
+        if any(r0 <= r <= r1 and c0 <= c <= c1 for r0, c0, r1, c1 in avoid) or cv.g[r][c][0] != " ":
             continue
-        if cv.g[r][c][0] != " ":
-            continue
-        cv.put(r, c, rnd.choice(".  .+·*"), rnd.choice(classes) if True else None)
+        cv.put(r, c, rnd.choice("..+·*"), rnd.choice(classes))
         placed += 1
 
 
+TWINKLE = """.tw0,.tw1,.tw2,.tw3{animation:tw 4s ease-in-out infinite}
+.tw1{animation-delay:1s} .tw2{animation-delay:2.2s} .tw3{animation-delay:3.1s}
+@keyframes tw{0%,100%{fill-opacity:.25}50%{fill-opacity:1}}"""
+
+
 # ============================================================================ HERO
-BRAND = "@balijepallipavan"
 PORTRAIT_RAMP = " .:-=+*#%@"
 
 
-def portrait_svg(x, y, fs, lh, dev_step):
-    """The ASCII portrait (assets/portrait.txt) as a cyanotype print that develops row by row."""
+def portrait_svg(x, y, fs, dev_step):
+    """assets/portrait.txt as chalk on the navy ground: shadows become light strokes."""
+    lh = fs * 1.2
     lines = open(os.path.join(HERE, "portrait.txt"), encoding="utf-8").read().split("\n")
-    tone = lambda ch: "pa" if PORTRAIT_RAMP.index(ch) >= 6 else "pb" if PORTRAIT_RAMP.index(ch) >= 3 else "pc"
-    out = [f'<g font-size="{fs}">']
+    tone = lambda ch: ("pa" if PORTRAIT_RAMP.index(ch) >= 6 else
+                       "pb" if PORTRAIT_RAMP.index(ch) >= 3 else "pc")
+    out = []
     for r, line in enumerate(lines):
         if not line.strip():
             continue
@@ -134,315 +183,170 @@ def portrait_svg(x, y, fs, lh, dev_step):
         body = "".join(escape(t) if k is None else f'<tspan class="{k}">{escape(t)}</tspan>' for k, t in runs)
         out.append(f'<text class="dev" style="font-size:{fs}px;animation-delay:{r * dev_step:.2f}s" '
                    f'x="{x}" y="{y + (r + 1) * lh:.1f}">{body}</text>')
-    out.append("</g>")
-    return "\n".join(out), len(lines)
+    return "\n".join(out), len(lines), max(map(len, lines)) * fs * 0.6, len(lines) * lh
 
 
 def hero():
-    ROWS, COLS = 33, 138
-    T = 22.0
+    ROWS, T = 26, 16.0
     a = Anim(T)
-    cv = Canvas(ROWS, COLS)        # static + per-char animated glyphs
-    x0, y0 = 26, 32
+    cv = Canvas(ROWS)
+    frame(cv, "FIG. 01", " PAVAN  //  CYANOTYPE", 1)
 
-    # ---- blueprint frame + labels
-    cv.put(0, 0, "+--", "d"); cv.put(0, COLS - 3, "--+", "d")
-    cv.put(ROWS - 1, 0, "+--", "d"); cv.put(ROWS - 1, COLS - 3, "--+", "d")
-    cv.put(1, 0, "|", "d"); cv.put(1, COLS - 1, "|", "d")
-    cv.put(ROWS - 2, 0, "|", "d"); cv.put(ROWS - 2, COLS - 1, "|", "d")
-    cv.put(0, 5, "FIG. 01", "m"); cv.put(0, 13, "PAVAN, THINKING  //  CYANOTYPE", "d")
-    cv.put(ROWS - 1, COLS - 40, BRAND, "m")
-    cv.put(ROWS - 1, COLS - 22, "// sheet 1 of 3", "d")
+    # portrait: chalk strokes, developing top to bottom, a soft light sweeping over
+    px, py = 46, 52
+    portrait, p_rows, p_w, p_h = portrait_svg(px, py, 7.0, 0.045)
+    sweep = (f'<clipPath id="pclip"><rect x="{px}" y="{py}" width="{p_w:.0f}" height="{p_h:.0f}"/></clipPath>'
+             f'<g clip-path="url(#pclip)"><rect class="scan" x="{px}" y="{py - 40}" width="{p_w:.0f}" '
+             f'height="40" fill="url(#sweep)"/></g>')
 
-    # ---- portrait card (pixel-positioned, its own font size)
-    card_x, card_y, card_w, card_h = 38, 50, 362, 426
-    p_fs, p_lh = 7.0, 8.43
-    portrait, p_rows = portrait_svg(card_x + 12, card_y + 4, p_fs, p_lh, 0.045)
-    card = (f'<rect x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="6" fill="{SURFACE}"/>'
-            f'<rect x="{card_x + 6}" y="{card_y + 6}" width="{card_w - 12}" height="{card_h - 12}" rx="3" '
-            f'fill="none" stroke="{BORDER}" stroke-width="1"/>')
-    scan = (f'<clipPath id="cardclip"><rect x="{card_x}" y="{card_y}" width="{card_w}" height="{card_h}" rx="6"/></clipPath>'
-            f'<g clip-path="url(#cardclip)"><rect class="scan" x="{card_x}" y="{card_y - 24}" width="{card_w}" '
-            f'height="24" fill="url(#scangrad)"/></g>')
-    cv.put(26, 2, "PLATE 01", "m"); cv.put(26, 12, "self-portrait, cyanotype", "d")
-    cv.put(27, 2, f"80 x {p_rows} chars", "d"); cv.put(27, 21, "//", "d")
-    cv.put(27, 24, "ramp", "d"); cv.put(27, 29, ".:-=+*#%@", "m")
+    # name block, set in the brand's type
+    tx = 424
+    name = (f'<text x="{tx}" y="118" style="font-family:{DISPLAY};font-weight:600;font-size:56px;'
+            f'letter-spacing:-0.5px" class="p rise">Pavan Kumar Balijepalli</text>'
+            f'<text x="{tx + 2}" y="158" style="font-family:{SERIF};font-style:italic;font-size:21px" '
+            f'class="m rise r2">building things that think, ship, and hold up in production.</text>'
+            f'<text x="{tx + 2}" y="196" style="font-family:{SANS};font-weight:500;font-size:16px" class="rise r3">'
+            f'<tspan class="p">Lead Data Scientist / AI Lead</tspan><tspan class="m"> @ Cigna</tspan>'
+            f'<tspan class="d">   ·   </tspan><tspan class="p">7+ yrs in AI/ML</tspan></text>'
+            f'<rect x="{tx + 2}" y="214" width="96" height="2" fill="{MIST}" class="rise r3"/>')
 
-    # ---- callouts pointing at the portrait
-    notes = [(12, "round glasses, reads papers"),
-             (15, "mustache: load-bearing"),
-             (19, "beard: grown, not prompted"),
-             (22, "checked shirt, checked facts")]
-    for r, text in notes:
-        cv.put(r, 46, "<--", "m co"); cv.put(r, 50, text, "p co")
+    # terminal
+    TR, TC, TW = 12, 47, 87
+    title = " pavan@balijepallipavan: ~ "
+    cv.put(TR, TC, ".--" + title + "-" * (TW - 5 - len(title)) + ".", "d")
+    cv.put(TR, TC + 3, title, "m")
+    for i in range(1, 10):
+        cv.put(TR + i, TC, "|", "d"); cv.put(TR + i, TC + TW - 1, "|", "d")
+    cv.put(TR + 10, TC, "'" + "-" * (TW - 2) + "'", "d")
 
-    # ---- thought bubbles rising from the curls into a neural-net cloud
-    for i, (r, c, ch) in enumerate([(11, 45, "."), (10, 46, "o"), (9, 47, "O")]):
-        cv.put(r, c, ch, f"m bub{i}")
-    C_R, C_C = 0, 46
-    cloud = [
-        r"",
-        r"      .-~~~-.     .-~~~~-.",
-        r"  .-~'       '-~~-'       '~-.",
-        r" (   o--.             .--o    )",
-        r"(        \-( o )-.   /         )",
-        r"(   o-----:       >-o-----o    )",
-        r"(        /-( o )-'   \         )",
-        r" (   o--'             '--o    )",
-        r"  '-._      _.-~~-._      _.-'",
-        r"      '~~~~'        '~~~~'",
-    ]
-    cv.art(C_R, C_C, cloud, "d")
-    for r, line in enumerate(cloud):
-        for c, ch in enumerate(line):
-            if ch == "o":
-                L = 0 if c < 8 else 1 if c < 16 else 2 if c < 23 else 3
-                cv.put(C_R + r, C_C + c, "o", f"p node{L}")
+    t, row = 1.2, TR + 1
 
-    # dimension line
-    cv.put(ROWS - 3, 2, "|<-------", "d")
-    cv.put(ROWS - 3, 12, "7+ yrs in AI / ML", "m")
-    cv.put(ROWS - 3, 30, "------->|", "d")
-
-    # ---- terminal
-    TR, TC, TW = 2, 79, 57
-    cv.put(TR, TC, "." + "-" * (TW - 2) + ".", "m")
-    cv.put(TR + 1, TC, "|", "m"); cv.put(TR + 1, TC + TW - 1, "|", "m")
-    cv.put(TR + 1, TC + 2, "o", "p"); cv.put(TR + 1, TC + 4, "o", "m"); cv.put(TR + 1, TC + 6, "o", "m")
-    cv.put(TR + 1, TC + 17, "pavan@balijepallipavan: ~", "m")
-    cv.put(TR + 2, TC, "|" + "-" * (TW - 2) + "|", "m")
-    body_rows = 25
-    for i in range(body_rows):
-        cv.put(TR + 3 + i, TC, "|", "m"); cv.put(TR + 3 + i, TC + TW - 1, "|", "m")
-    cv.put(TR + 3 + body_rows, TC, "'" + "-" * (TW - 2) + "'", "m")
-
-    t = 0.6
-    row = TR + 4
-
-    def cmd(text, pause=0.5):
+    def cmd(text, pause=0.45):
         nonlocal t, row
         cv.put(row, TC + 2, "$", "m " + a.reveal(t))
         for j, ch in enumerate(text):
-            t += 0.07
+            t += 0.06
             cv.put(row, TC + 4 + j, ch, "p " + a.reveal(t))
         t += pause
-        row += 1
+        return TC + 4 + len(text)
 
-    def out(segs, gap=0.12, indent=4):
+    def out(segs, gap=0.12):
         nonlocal t, row
         cls_t = a.reveal(t)
-        col = TC + indent
+        col = TC + 4
         for text, c in segs:
             cv.put(row, col, text, f"{c} {cls_t}")
             col += len(text)
         t += gap
         row += 1
 
-    cmd("whoami")
-    out([("Pavan Kumar Balijepalli", "p")])
-    out([("Lead Data Scientist / AI Lead ", "p"), ("@ Cigna", "m")])
-    out([("7+ yrs in AI/ML, mostly the unglamorous middle", "p")])
-    row += 1; t += 0.6
-    cmd("cat now.txt")
+    cmd("cat now.txt"); row += 1
     for k, v in [("shipping", "agentic systems, built to last"),
                  ("studying", "M.Tech AIML @ BITS Pilani"),
-                 ("teaching", "guest lectures @ BITS WILP"),
-                 ("digging", "how LLMs are actually pretrained"),
-                 ("building", f"{BRAND}, a village"),
-                 ]:
-        out([(f"{k} ", "m"), ("." * (12 - len(k)), "d"), (" " + v, "p")])
-    row += 1; t += 0.6
-    cmd("ls ~/huggingface")
-    out([("TeLLM/", "p"), ("          a Telugu LLM", "d")])
-    out([("phi2-sqlcoder/", "p"), ("  plain English -> SQL", "d")])
-    row += 1; t += 0.6
-    cmd("./think --hard --no-hype")
-    bar_row, bar_w = row, 36
-    cv.put(bar_row, TC + 4, "[", "m " + a.reveal(t)); cv.put(bar_row, TC + 5 + bar_w, "]", "m " + a.reveal(t))
+                 ("teaching", "guest lectures @ BITS Pilani WILP"),
+                 ("open", "TeLLM, phi2-sqlcoder on Hugging Face")]:
+        out([(f"{k} ", "m"), ("." * (11 - len(k)), "d"), ("  " + v, "p")])
+    row += 1; t += 0.5
+    end = cmd("./think --hard --no-hype", pause=0.2)
+    bar_c, bar_w = end + 3, 24
+    cv.put(row, bar_c, "[", "m " + a.reveal(t)); cv.put(row, bar_c + bar_w + 1, "]", "m " + a.reveal(t))
     for j in range(bar_w):
-        cv.put(bar_row, TC + 5 + j, ".", "d " + a.reveal(t))
-        cv.put(bar_row, TC + 5 + j, "#", "p " + a.reveal(t + 0.1 + j * 0.06), opaque=True)
-    t += 0.1 + bar_w * 0.06
+        cv.put(row, bar_c + 1 + j, ".", "d " + a.reveal(t))
+        cv.put(row, bar_c + 1 + j, "#", "p " + a.reveal(t + 0.1 + j * 0.06), opaque=True)
+    t += 0.1 + bar_w * 0.06 + 0.4
     row += 1
-    out([("> ", "m"), ("what is the model ", "p"), ("*actually*", "m"), (" doing?", "p")], gap=0.5)
-    out([("> ", "m"), ("be comfortable being wrong in public.", "p")], gap=0.8)
-    row += 1
+    out([("> ", "m"), ("what is the model ", "p"), ("actually", "m"), (" doing?", "p")], gap=0.8)
     cv.put(row, TC + 2, "$", "m " + a.reveal(t))
-    cursor_row, cursor_col = row, TC + 4
-    cursor_on = t / T * 100
+    cursor_x, cursor_y, cursor_on = X0 + (TC + 4) * CW, Y0 + row * LH - 13, t / T * 100
 
-    # stars, kept off the card, cloud, notes and terminal
-    stars(cv, ROWS, COLS, 30, [(0, TC - 1, ROWS - 1, TC + TW), (0, 0, 27, 45), (0, 45, 10, 78),
-                               (11, 45, 23, 78), (ROWS - 3, 0, ROWS - 1, COLS)],
-          seed=7, classes=["d tw0", "d tw1", "d tw2", "m tw3"])
+    stars(cv, 22, [(0, 0, ROWS - 1, 46), (1, 46, 11, COLS - 1), (TR, TC - 1, TR + 10, TC + TW)],
+          seed=5, classes=["d tw0", "d tw1", "d tw2", "m tw3"])
 
-    W = int(COLS * CW + 56)
-    H = ROWS * LH + 40
-    cursor = Canvas(ROWS, COLS)
-    cursor.put(cursor_row, cursor_col, "█", "m cur")
-
+    H = ROWS * LH + 30
     style = f"""
-.p{{fill:{BG}}} .m{{fill:{MIST}}} .d{{fill:{INK_MUTED}}}
-.pa{{fill:{INK}}} .pb{{fill:{COBALT}}} .pc{{fill:{MIST}}}
+.pa{{fill:{BG}}} .pb{{fill:{MIST}}} .pc{{fill:{INK_MUTED}}}
 .dev{{animation:dev 1.4s ease-out both}}
 @keyframes dev{{0%{{fill-opacity:0}}40%{{fill-opacity:.35}}100%{{fill-opacity:1}}}}
-.co{{animation:dev 1s ease-out 2.6s both}}
-.scan{{animation:scan 7s ease-in-out infinite}}
-@keyframes scan{{0%{{transform:translateY(0)}}70%,100%{{transform:translateY({card_h + 24}px)}}}}
+.scan{{animation:scan 7s ease-in-out 2.2s infinite}}
+@keyframes scan{{0%{{transform:translateY(0)}}70%,100%{{transform:translateY({p_h + 40:.0f}px)}}}}
+.rise{{animation:rise 1s ease-out .3s both}} .r2{{animation-delay:.6s}} .r3{{animation-delay:.9s}}
+@keyframes rise{{0%{{opacity:0;transform:translateY(8px)}}100%{{opacity:1;transform:none}}}}
 .cur{{animation:blink 1s steps(1) infinite}}
-@keyframes blink{{50%{{fill-opacity:0}}}}
+@keyframes blink{{50%{{opacity:0}}}}
 .curwrap{{animation:cw {T}s linear infinite}}
 @keyframes cw{{0%,{cursor_on - 0.01:.2f}%{{opacity:0}}{cursor_on:.2f}%,95.49%{{opacity:1}}95.5%,100%{{opacity:0}}}}
-.node0,.node1,.node2,.node3{{animation:pulse 2.4s ease-in-out infinite}}
-.node1{{animation-delay:.3s}} .node2{{animation-delay:.6s}} .node3{{animation-delay:.9s}}
-@keyframes pulse{{0%,100%{{fill:{INK_MUTED}}}35%{{fill:{BG}}}60%{{fill:{MIST}}}}}
-.bub0,.bub1,.bub2{{animation:bub 3s ease-in-out infinite}}
-.bub1{{animation-delay:.4s}} .bub2{{animation-delay:.8s}}
-@keyframes bub{{0%,100%{{fill-opacity:.25}}40%{{fill-opacity:1}}}}
-.tw0,.tw1,.tw2,.tw3{{animation:tw 4s ease-in-out infinite}}
-.tw1{{animation-delay:1s}} .tw2{{animation-delay:2.2s}} .tw3{{animation-delay:3.1s}}
-@keyframes tw{{0%,100%{{fill-opacity:.25}}50%{{fill-opacity:1}}}}
+{TWINKLE}
 {chr(10).join(a.css)}
 """
-    defs = (f'<defs><linearGradient id="scangrad" x1="0" y1="0" x2="0" y2="1">'
+    used = "Pavan Kumar Balijepalli"
+    fonts = [mono_face(),
+             font_face("PKB Garamond", "EBGaramond-SemiBold.woff2", used, 600),
+             font_face("PKB Lora", "Lora-Italic.woff2",
+                       "building things that think, ship, and hold up in production.", 400, "italic"),
+             font_face("PKB Grotesk", "SpaceGrotesk-Medium.woff2",
+                       "Lead Data Scientist / AI Lead @ Cigna · 7+ yrs in AI/ML", 500)]
+    defs = (f'<defs><linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">'
             f'<stop offset="0" stop-color="{MIST}" stop-opacity="0"/>'
-            f'<stop offset="1" stop-color="{COBALT}" stop-opacity=".22"/></linearGradient></defs>')
-    body = (defs + card + "\n" + portrait + "\n" + scan + "\n" + cv.svg(x0, y0)
-            + f'\n<g class="curwrap">{cursor.svg(x0, y0)}</g>')
-    return wrap_svg(W, H, style, body, "Pavan, thinking",
-                    "Animated ASCII art: an ASCII self-portrait of Pavan Kumar Balijepalli printed like a "
-                    "cyanotype, with blueprint callouts, a neural-network thought cloud, and a terminal "
-                    "introducing him as Lead Data Scientist / AI Lead at Cigna.", INK)
+            f'<stop offset="1" stop-color="{MIST}" stop-opacity=".18"/></linearGradient></defs>')
+    cursor = (f'<g class="curwrap"><rect class="cur" x="{cursor_x:.1f}" y="{cursor_y}" width="8" '
+              f'height="16" fill="{MIST}"/></g>')
+    body = defs + portrait + "\n" + sweep + "\n" + name + "\n" + cv.svg() + "\n" + cursor
+    return wrap_svg(H, style, body, "Pavan Kumar Balijepalli",
+                    "An ASCII self-portrait drawn like chalk on navy, beside the name Pavan Kumar "
+                    "Balijepalli, the line 'building things that think, ship, and hold up in production', "
+                    "Lead Data Scientist / AI Lead at Cigna, 7+ years in AI/ML, and a terminal: shipping "
+                    "agentic systems, studying M.Tech AIML at BITS Pilani, guest lecturing at BITS Pilani "
+                    "WILP, TeLLM and phi2-sqlcoder on Hugging Face.", fonts)
 
 
-# ===================================================================== PRETRAINING
-def pretraining():
-    ROWS, COLS = 34, 138
-    T = 12.0
-    a = Anim(T)
-    cv = Canvas(ROWS, COLS)
+# =========================================================================== BRAND
+def brand():
+    ROWS = 12
+    cv = Canvas(ROWS)
+    frame(cv, "FIG. 02", " THE VILLAGE", 2)
 
-    cv.put(0, 0, "+--", "b"); cv.put(0, COLS - 3, "--+", "b")
-    cv.put(ROWS - 1, 0, "+--", "b"); cv.put(ROWS - 1, COLS - 3, "--+", "b")
-    cv.put(0, 5, "FIG. 02", "c"); cv.put(0, 13, "HOW LLMs ARE ACTUALLY PRETRAINED  //  what I'm digging into", "u")
-    cv.put(ROWS - 1, COLS - 40, BRAND, "c")
-    cv.put(ROWS - 1, COLS - 22, "// sheet 2 of 3", "u")
+    line1 = "AI/ML for people who feel like outsiders in AI."
+    line2 = "be the mentor I never had."
+    text = (f'<text x="48" y="104" style="font-family:{DISPLAY};font-weight:600;font-size:48px" '
+            f'class="p">{BRAND}</text>'
+            f'<text x="50" y="146" style="font-family:{SANS};font-size:19px" class="p">{escape(line1)}</text>'
+            f'<text x="50" y="180" style="font-family:{SERIF};font-style:italic;font-size:19px" class="m">'
+            f'{escape(line2)}</text>')
 
-    # ---- left: loss curve drawing itself
-    L_R, L_C = 4, 3
-    cv.put(L_R, L_C, "loss", "c")
-    cv.put(L_R + 1, L_C + 1, "^", "i")
-    H = 18
-    for i in range(H):
-        cv.put(L_R + 2 + i, L_C + 1, "|", "i")
-    cv.put(L_R + 2 + H, L_C + 1, "+" + "-" * 30 + "> steps", "i")
-    for i, lab in enumerate(["0", "10k", "20k", "30k"]):
-        cv.put(L_R + 3 + H, L_C + 2 + i * 9, lab, "u")
-    import math
-    prev, k = None, 0
-    rnd_l = random.Random(11)
-    for x in range(30):
-        y = 0.9 * math.exp(-x / 5.5) + 0.07 + rnd_l.uniform(-0.02, 0.02) * math.exp(-x / 25)
-        r = max(0, min(H - 1, int(round((1 - y) * (H - 1)))))
-        rows_here = [r] if prev is None or r - prev <= 1 else list(range(prev + 1, r + 1))
-        for rr in rows_here:
-            ch = "*" if rr == r else ":"
-            cv.put(L_R + 2 + rr, L_C + 2 + x, ch, "c " + a.reveal(0.3 + k * 0.11))
-            k += 1
-        prev = r
-    cv.put(L_R + 5, L_C + 18, "next-token", "u")
-    cv.put(L_R + 6, L_C + 18, "cross-entropy", "u")
-    cv.put(L_R + 7, L_C + 18, "goes down.", "u")
-    cv.put(L_R + 8, L_C + 18, "slowly.", "c " + a.reveal(5.0))
+    # a little village, windows lighting up one by one (houses share one ground line)
+    small = ["   /\\   ", "  /  \\  ", " /____\\ ", " | [] | ", " |_[]_| "]
+    tall = ["   /\\   ", "  /  \\  ", " /____\\ ", " | [] | ", " | [] | ", " |_[]_| "]
+    wide = ["    /\\      ", "   /  \\____ ", "  /____\\   \\", "  | [] | [] |", "  |_[]_|____|"]
+    ground, c, win = 8, 80, 0
+    for art in [small, tall, wide, small, tall, small]:
+        top = ground - len(art)
+        for i, line in enumerate(art):
+            for j, ch in enumerate(line):
+                if ch != " ":
+                    cv.put(top + i, c + j, ch, "m")
+            k = line.find("[]")
+            while k != -1:
+                cv.put(top + i, c + k, "[]", f"win w{win % 6}")
+                win += 1
+                k = line.find("[]", k + 2)
+        c += max(map(len, art))
+    cv.put(ground, 79, "-" * (c - 79 + 1), "d")
+    cv.put(ground + 1, 80, "a village, not an audience.", "d")
+    cv.put(1, 96, "*", "m tw0"); cv.put(1, 84, ".", "d tw1"); cv.put(2, 112, "+", "d tw2"); cv.put(1, 124, ".", "m tw3")
 
-    # ---- centre: decoder block with a forward pass lighting up
-    M_C = 46
-    blocks = [
-        (2, "  next-token probs  ", None),
-        (5, "      softmax       ", 9),
-        (8, "       linear       ", 8),
-        (12, "    add  &  norm    ", 7),
-        (15, "    feed forward    ", 6),
-        (18, "    add  &  norm    ", 5),
-        (21, " masked multi-head  ", 4),
-        (22, "     attention      ", 4),
-        (26, " token + pos embed  ", 2),
-    ]
-    W_ = 22
-    def box(r, h, cls):
-        cv.put(r, M_C, "." + "-" * W_ + ".", cls)
-        for i in range(h):
-            cv.put(r + 1 + i, M_C, "|", cls); cv.put(r + 1 + i, M_C + W_ + 1, "|", cls)
-        cv.put(r + h + 1, M_C, "'" + "-" * W_ + "'", cls)
-    box(4, 1, "i"); box(7, 1, "i"); box(11, 1, "u"); box(14, 1, "u"); box(17, 1, "u"); box(20, 2, "u"); box(25, 1, "i")
-    # repeated-layer bracket
-    cv.put(10, M_C - 3, ".-" + "-" * (W_ + 4) + "-.", "c")
-    for r in range(11, 24):
-        cv.put(r, M_C - 3, "|", "c"); cv.put(r, M_C + W_ + 4, "|", "c")
-    cv.put(24, M_C - 3, "'-" + "-" * (W_ + 4) + "-'", "c")
-    cv.put(17, M_C + W_ + 6, "x N", "c")
-    mid = M_C + 1 + W_ // 2
-    # forward pass: arrows and labels light up bottom -> top
-    seq = [(29, "tok"), (28, "^"), (26, "lbl"), (24, "^"), (23, "^"), (21, "lbl"), (22, "lbl"),
-           (19, "^"), (18, "lbl"), (16, "^"), (15, "lbl"), (13, "^"), (12, "lbl"), (10, "^"),
-           (9, "^"), (8, "lbl"), (6, "^"), (5, "lbl"), (3, "^"), (2, "lbl")]
-    labels = {r: txt for r, txt, _ in blocks}
-    step = 0.32
-    for k, (r, kind) in enumerate(seq):
-        cls = f"fw fw{k}"
-        if kind == "^":
-            cv.put(r, mid, "^", "u " + cls)
-        elif kind == "lbl":
-            cv.put(r, M_C + 1, labels[r], "i " + cls)
-    cv.put(29, M_C - 6, '"the model is actually ..."', "u fw fw0")
-    cv.put(30, M_C + 1, "predict the next token.", "u")
-    cv.put(31, M_C + 1, "then do it a trillion times.", "c")
-    fw_css = "\n".join(f".fw{k}{{animation-delay:{k * step:.2f}s}}" for k in range(len(seq)))
-
-    # ---- right: causal attention map, shimmering
-    A_R, A_C = 4, 96
-    toks = ["the", "model", "is", "actually", "just", "guessing", "the", "next", "word"]
-    n = len(toks)
-    cv.put(A_R, A_C, "causal self-attention (one head)", "c")
-    shade = " .:-=+*#%@"
-    rnd = random.Random(3)
-    for i, tk in enumerate(toks):
-        cv.put(A_R + 2 + i * 2, A_C, f"{tk:>9}", "u")
-        weights = [rnd.random() ** 1.6 for _ in range(i + 1)]
-        weights[-1] += 0.6; s = sum(weights)
-        for j in range(n):
-            col = A_C + 11 + j * 3
-            if j <= i:
-                v = weights[j] / s
-                ch = shade[min(9, 1 + int(v * 14))]
-                cv.put(A_R + 2 + i * 2, col, ch, f"c at{rnd.randrange(5)}")
-            else:
-                cv.put(A_R + 2 + i * 2, col, ".", "b")
-    for j, tk in enumerate(toks):
-        cv.put(A_R + 2 + n * 2, A_C + 11 + j * 3, tk[0], "u")
-    cv.put(A_R + 4 + n * 2, A_C, "each token only looks back.", "u")
-    cv.put(A_R + 5 + n * 2, A_C, "no peeking at the future.", "u")
-
-    W = int(COLS * CW + 56)
-    H = ROWS * LH + 40
-    period = len(seq) * step + 2.0
+    H = ROWS * LH + 30
     style = f"""
-.i{{fill:{INK}}} .c{{fill:{COBALT}}} .u{{fill:{INK_MUTED}}} .b{{fill:{BORDER}}}
-.fw{{animation:fw {period:.2f}s ease-out infinite}}
-@keyframes fw{{0%,14%{{fill:{COBALT};fill-opacity:1}}4%{{fill:{MIST}}}28%,100%{{}}}}
-{fw_css}
-.at0,.at1,.at2,.at3,.at4{{animation:at 3.2s ease-in-out infinite}}
-.at1{{animation-delay:.6s}} .at2{{animation-delay:1.3s}} .at3{{animation-delay:1.9s}} .at4{{animation-delay:2.6s}}
-@keyframes at{{0%,100%{{fill-opacity:1}}50%{{fill-opacity:.35}}}}
-{chr(10).join(a.css)}
+.win{{fill:{INK_MUTED};animation:win 6s ease-in-out infinite}}
+.w1{{animation-delay:.8s}} .w2{{animation-delay:1.9s}} .w3{{animation-delay:2.7s}} .w4{{animation-delay:3.6s}} .w5{{animation-delay:4.4s}}
+@keyframes win{{0%,100%{{fill:{INK_MUTED}}}30%,70%{{fill:{BG}}}}}
+{TWINKLE}
 """
-    grid = (f'<defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">'
-            f'<path d="M40 0H0V40" fill="none" stroke="{BORDER}" stroke-width="1"/></pattern></defs>'
-            f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="12" fill="url(#g)" opacity=".55"/>')
-    return wrap_svg(W, H, style, grid + "\n" + cv.svg(26, 32), "How LLMs are actually pretrained",
-                    "Animated ASCII blueprint: a loss curve drawing itself, a decoder-only "
-                    "transformer block with a forward pass lighting up, and a causal attention map.",
-                    BG, border=BORDER)
+    fonts = [mono_face(),
+             font_face("PKB Garamond", "EBGaramond-SemiBold.woff2", BRAND, 600),
+             font_face("PKB Lora", "Lora-Italic.woff2", line2, 400, "italic"),
+             font_face("PKB Grotesk", "SpaceGrotesk-Regular.woff2", line1, 400)]
+    return wrap_svg(H, style, text + "\n" + cv.svg(), BRAND,
+                    f"{BRAND}: {line1} {line2} A little ASCII village: a village, not an audience.", fonts)
 
 
 # ========================================================================== FOOTER
@@ -531,9 +435,6 @@ def footer():
     ]
     boat.art(11, 57, bt, "p", ["", "", "", "", "     m  m"], {"m": "m"})
 
-    cv.put(21, 6, "analog in a digital life.", "p")
-    cv.put(21, 33, "//", "d")
-    cv.put(21, 36, "be the mentor you never had.", "m")
 
     W = int(COLS * CW + 56)
     H = ROWS * LH + 40
@@ -557,13 +458,18 @@ def footer():
     for f, wcv in enumerate(waves):
         body += f'\n<g class="w{f}">{wcv.svg(26, 32)}</g>'
     body += f'\n<g class="boat">{boat.svg(26, 32)}</g>'
-    return wrap_svg(W, H, style, body, "A chart drawn at sea",
+    motto = "analog in a digital life."
+    body += (f'\n<text x="76" y="412" style="font-family:{SERIF};font-style:italic;font-size:20px" '
+             f'class="p">{motto}</text>')
+    fonts = [mono_face(), font_face("PKB Lora", "Lora-Italic.woff2", motto, 400, "italic")]
+    return wrap_svg(H, style, body, "A chart drawn at sea",
                     "Animated ASCII sea chart: compass rose, a lighthouse with a sweeping beam, "
-                    "a bobbing boat on scrolling waves. Analog in a digital life.", INK)
+                    "a bobbing boat on scrolling waves, sailing from 'first video' to 'the village'. "
+                    "Analog in a digital life.", fonts)
 
 
 if __name__ == "__main__":
-    for name, fn in [("hero", hero), ("pretraining", pretraining), ("footer", footer)]:
+    for name, fn in [("hero", hero), ("brand", brand), ("footer", footer)]:
         path = os.path.join(HERE, f"{name}.svg")
         with open(path, "w", encoding="utf-8") as fh:
             fh.write(fn())
