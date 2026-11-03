@@ -116,19 +116,30 @@ class Anim:
         return name
 
 
-def wrap_svg(h, style, body, title, desc, fonts):
+def wrap_svg(h, style, body, title, desc, fonts, light=False):
+    """Dark (navy ground) by default; light=True gives the paper ground with a blueprint grid."""
     w = WIDTH
+    if light:
+        colors = f".p{{{{fill:{INK}}}}} .m{{{{fill:{COBALT}}}}} .d{{{{fill:{INK_MUTED}}}}}"
+        ground = (f'<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">'
+                  f'<path d="M40 0H0V40" fill="none" stroke="{BORDER}" stroke-width="1"/></pattern></defs>'
+                  f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="12" fill="{BG}" stroke="{BORDER}"/>'
+                  f'<rect x="1" y="1" width="{w - 2}" height="{h - 2}" rx="12" fill="url(#grid)" opacity=".45"/>')
+    else:
+        colors = f".p{{{{fill:{BG}}}}} .m{{{{fill:{MIST}}}}} .d{{{{fill:{INK_MUTED}}}}}"
+        ground = f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="12" fill="{INK}"/>'
+    colors = colors.replace("{{", "{").replace("}}", "}")
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" role="img" aria-labelledby="t d" xml:space="preserve">
 <title id="t">{escape(title)}</title>
 <desc id="d">{escape(desc)}</desc>
 <style>
 {chr(10).join(fonts)}
 text{{font-family:{MONO};font-size:{FS}px;white-space:pre;font-variant-ligatures:none}}
-.p{{fill:{BG}}} .m{{fill:{MIST}}} .d{{fill:{INK_MUTED}}}
+{colors}
 {style}
 @media (prefers-reduced-motion: reduce){{*{{animation:none!important;fill-opacity:1!important;opacity:1!important}}}}
 </style>
-<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="12" fill="{INK}"/>
+{ground}
 {body}
 </svg>
 """
@@ -164,7 +175,7 @@ PORTRAIT_RAMP = " .:-=+*#%@"
 
 
 def portrait_svg(x, y, fs, dev_step):
-    """assets/portrait.txt as chalk on the navy ground: shadows become light strokes."""
+    """assets/portrait.txt printed like a cyanotype: shadows become navy / cobalt strokes."""
     lh = fs * 1.2
     lines = open(os.path.join(HERE, "portrait.txt"), encoding="utf-8").read().split("\n")
     tone = lambda ch: ("pa" if PORTRAIT_RAMP.index(ch) >= 6 else
@@ -208,7 +219,7 @@ def hero():
             f'<text x="{tx + 2}" y="196" style="font-family:{SANS};font-weight:500;font-size:16px" class="rise r3">'
             f'<tspan class="p">Lead Data Scientist / AI Lead</tspan><tspan class="m"> @ Cigna</tspan>'
             f'<tspan class="d">   ·   </tspan><tspan class="p">7+ yrs in AI/ML</tspan></text>'
-            f'<rect x="{tx + 2}" y="214" width="96" height="2" fill="{MIST}" class="rise r3"/>')
+            f'<rect x="{tx + 2}" y="214" width="96" height="2" fill="{COBALT}" class="rise r3"/>')
 
     # terminal
     TR, TC, TW = 12, 47, 87
@@ -260,11 +271,11 @@ def hero():
     cursor_x, cursor_y, cursor_on = X0 + (TC + 4) * CW, Y0 + row * LH - 13, t / T * 100
 
     stars(cv, 22, [(0, 0, ROWS - 1, 46), (1, 46, 11, COLS - 1), (TR, TC - 1, TR + 10, TC + TW)],
-          seed=5, classes=["d tw0", "d tw1", "d tw2", "m tw3"])
+          seed=5, classes=["s tw0", "s tw1", "s tw2", "m tw3"])
 
     H = ROWS * LH + 30
     style = f"""
-.pa{{fill:{BG}}} .pb{{fill:{MIST}}} .pc{{fill:{INK_MUTED}}}
+.pa{{fill:{INK}}} .pb{{fill:{COBALT}}} .pc{{fill:{MIST}}} .s{{fill:{MIST}}}
 .dev{{animation:dev 1.4s ease-out both}}
 @keyframes dev{{0%{{fill-opacity:0}}40%{{fill-opacity:.35}}100%{{fill-opacity:1}}}}
 .scan{{animation:scan 7s ease-in-out 2.2s infinite}}
@@ -286,17 +297,17 @@ def hero():
              font_face("PKB Grotesk", "SpaceGrotesk-Medium.woff2",
                        "Lead Data Scientist / AI Lead @ Cigna · 7+ yrs in AI/ML", 500)]
     defs = (f'<defs><linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">'
-            f'<stop offset="0" stop-color="{MIST}" stop-opacity="0"/>'
-            f'<stop offset="1" stop-color="{MIST}" stop-opacity=".18"/></linearGradient></defs>')
+            f'<stop offset="0" stop-color="{COBALT}" stop-opacity="0"/>'
+            f'<stop offset="1" stop-color="{COBALT}" stop-opacity=".14"/></linearGradient></defs>')
     cursor = (f'<g class="curwrap"><rect class="cur" x="{cursor_x:.1f}" y="{cursor_y}" width="8" '
-              f'height="16" fill="{MIST}"/></g>')
+              f'height="16" fill="{COBALT}"/></g>')
     body = defs + portrait + "\n" + sweep + "\n" + name + "\n" + cv.svg() + "\n" + cursor
     return wrap_svg(H, style, body, "Pavan Kumar Balijepalli",
-                    "An ASCII self-portrait drawn like chalk on navy, beside the name Pavan Kumar "
+                    "An ASCII self-portrait printed like a cyanotype, beside the name Pavan Kumar "
                     "Balijepalli, the line 'building things that think, ship, and hold up in production', "
                     "Lead Data Scientist / AI Lead at Cigna, 7+ years in AI/ML, and a terminal: shipping "
                     "agentic systems, studying M.Tech AIML at BITS Pilani, guest lecturing at BITS Pilani "
-                    "WILP, TeLLM and phi2-sqlcoder on Hugging Face.", fonts)
+                    "WILP, TeLLM and phi2-sqlcoder on Hugging Face.", fonts, light=True)
 
 
 # =========================================================================== BRAND

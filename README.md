@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="An ASCII self-portrait drawn like chalk on navy, beside the name Pavan Kumar Balijepalli: building things that think, ship, and hold up in production. Lead Data Scientist / AI Lead at Cigna, 7+ years in AI/ML. Shipping agentic systems, studying M.Tech AIML at BITS Pilani, guest lecturing at BITS Pilani WILP, TeLLM and phi2-sqlcoder on Hugging Face." />
+<img src="./assets/hero.svg" width="100%" alt="An ASCII self-portrait printed like a cyanotype, beside the name Pavan Kumar Balijepalli: building things that think, ship, and hold up in production. Lead Data Scientist / AI Lead at Cigna, 7+ years in AI/ML. Shipping agentic systems, studying M.Tech AIML at BITS Pilani, guest lecturing at BITS Pilani WILP, TeLLM and phi2-sqlcoder on Hugging Face." />
 
 <img src="./assets/brand.svg" width="100%" alt="@balijepallipavan: AI/ML for people who feel like outsiders in AI. Be the mentor I never had. A village, not an audience." />
 
