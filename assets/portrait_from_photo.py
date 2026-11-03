@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Turns a photo into the ASCII portrait used by the hero (assets/portrait.txt).
+"""Turns a photo into the ASCII portrait at the top of the README.
 
-    python3 assets/portrait_from_photo.py photo.jpg > assets/portrait.txt
-    python3 assets/generate.py
+    python3 assets/portrait_from_photo.py photo.jpg
+
+Paste the output into the README's first code block.
 
 CROP and SILHOUETTE are hand-tuned for the original 1200x1600 selfie: the crop frames
 head and shoulders, and the polygon traces hair, face, beard and shoulders so the wall,
@@ -13,8 +14,8 @@ import sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageOps
 
-COLS = 80                 # characters per row
-ASPECT = 0.5              # character width / line height in the hero
+COLS = 72                 # characters per row (fits GitHub's profile column)
+ASPECT = 0.414            # GitHub code blocks: 0.6em advance / 1.45 line height
 GAMMA = 1.15              # >1 keeps skin light so features stand out
 FEATURE = 0.6             # weight of local contrast (glasses, eyes, mustache)
 RAMP = " .:-=+*#%@"       # light -> dark
