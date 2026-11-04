@@ -217,7 +217,7 @@ def hero():
             f'<text x="{tx + 2}" y="158" style="font-family:{SERIF};font-style:italic;font-size:21px" '
             f'class="m rise r2">building things that think, ship, and hold up in production.</text>'
             f'<text x="{tx + 2}" y="196" style="font-family:{SANS};font-weight:500;font-size:16px" class="rise r3">'
-            f'<tspan class="p">Lead Data Scientist / AI Lead</tspan><tspan class="m"> @ Cigna</tspan>'
+            f'<tspan class="p">AI Lead</tspan><tspan class="m"> @ Cigna</tspan>'
             f'<tspan class="d">   ·   </tspan><tspan class="p">7+ yrs in AI/ML</tspan></text>'
             f'<rect x="{tx + 2}" y="214" width="96" height="2" fill="{COBALT}" class="rise r3"/>')
 
@@ -253,7 +253,7 @@ def hero():
 
     cmd("cat now.txt"); row += 1
     for k, v in [("shipping", "agentic systems, built to last"),
-                 ("studying", "M.Tech AIML @ BITS Pilani"),
+                 ("studying", "pretraining slms, and finetuning"),
                  ("teaching", "guest lectures @ BITS Pilani WILP"),
                  ("open", "TeLLM, phi2-sqlcoder on Hugging Face")]:
         out([(f"{k} ", "m"), ("." * (11 - len(k)), "d"), ("  " + v, "p")])
